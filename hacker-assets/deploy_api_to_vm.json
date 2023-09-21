@@ -1,0 +1,185 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "metadata": {
+      "_generator": {
+        "name": "bicep",
+        "version": "0.8.9.13224",
+        "templateHash": "15559643551456468043"
+      }
+    },
+    "parameters": {
+      "vmName": {
+        "type": "string",
+        "metadata": {
+          "description": "The name of you Virtual Machine."
+        }
+      },
+      "adminUsername": {
+        "type": "string",
+        "defaultValue": "demouser",
+        "metadata": {
+          "description": "SSH username for the Virtual Machine."
+        }
+      },
+      "adminPassword": {
+        "type": "securestring",
+        "metadata": {
+          "description": "SSH password for the Virtual Machine."
+        }
+      },
+      "location": {
+        "type": "string",
+        "defaultValue": "[resourceGroup().location]",
+        "metadata": {
+          "description": "Location for all resources."
+        }
+      },
+      "availabilityZone": {
+        "type": "string",
+        "defaultValue": "",
+        "metadata": {
+          "description": "Availability Zone for VM. If not specified no AZs will be used"
+        }
+      },
+      "vmSize": {
+        "type": "string",
+        "defaultValue": "Standard_D2s_v3",
+        "metadata": {
+          "description": "The size of the VM"
+        }
+      },
+      "virtualNetworkName": {
+        "type": "string",
+        "metadata": {
+          "description": "Name of the VNet. Needs to have been previously created in the same RG where the VM will be deployed"
+        }
+      },
+      "subnetName": {
+        "type": "string",
+        "metadata": {
+          "description": "Name of the subnet in the virtual network. Needs to have been previously created"
+        }
+      },
+      "sqlServerFQDN":{
+        "type": "string",
+        "metadata": {
+            "description": "Fully-Qualified Domain Name or IP address of SQL Server"
+        }
+      },
+      "sqlServerUser":{
+        "type": "string",
+        "defaultValue": "demouser",
+        "metadata": {
+            "description": "Username for SQL auth"
+        }
+      },
+      "sqlServerPassword":{
+        "type": "securestring",
+        "defaultValue": "demo!pass123",
+        "metadata": {
+            "description": "Password for SQL auth"
+        }
+      },
+      "vmType": {
+        "type": "string",
+        "defaultValue": "kinvolk",
+        "metadata": {
+            "description": "VM OS to use. It can be either kinvolk or ubuntu"
+        },
+        "allowedValues": ["kinvolk", "ubuntu"]
+      }
+    },
+    "variables": {
+      "publisher": "[if(equals(parameters('vmType'),'kinvolk'), 'kinvolk', 'Canonical')]",
+      "offer": "[if(equals(parameters('vmType'),'kinvolk'), 'flatcar-container-linux-free', '0001-com-ubuntu-server-focal')]",
+      "sku": "[if(equals(parameters('vmType'),'kinvolk'), 'stable-gen2', '20_04-lts-gen2')]",
+      "version": "latest",
+      "kinvolk_plan": {
+            "name": "[variables('sku')]",
+            "product": "[variables('offer')]",
+            "publisher": "[variables('publisher')]"
+      },
+      "containerImage": "securenetworkinghackathon/ohndapi:1.0",
+      "networkInterfaceName": "[format('{0}-nic', parameters('vmName'))]",
+      "osDiskType": "Standard_LRS",
+      "ubuntu_customData_line1": "#!/bin/bash\n",
+      "ubuntu_customData_line2": "apt update\n",
+      "ubuntu_customData_line3": "apt install -y apt-transport-https ca-certificates curl software-properties-common\n",
+      "ubuntu_customData_line4": "curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -\n",
+      "ubuntu_customData_line5": "add-apt-repository \"deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable\"\n",
+      "ubuntu_customData_line6": "apt-cache policy docker-ce\n",
+      "ubuntu_customData_line7": "apt install -y docker-ce\n",
+      "ubuntu_customData_line8": "[concat('docker run --restart always -d -p 8080:8080 -e \"SQL_SERVER_FQDN=', parameters('sqlServerFQDN'),'\" -e \"SQL_SERVER_USERNAME=', parameters('sqlServerUser'),'\" -e \"SQL_SERVER_PASSWORD=', parameters('sqlServerPassword'),'\" --name api ', variables('containerImage'))]",
+      "ubuntu_customData": "[concat(variables('ubuntu_customData_line1'), variables('ubuntu_customData_line2'), variables('ubuntu_customData_line3'), variables('ubuntu_customData_line4'), variables('ubuntu_customData_line5'), variables('ubuntu_customData_line6'), variables('ubuntu_customData_line7'), variables('ubuntu_customData_line8'))]",
+      "kinvolk_customData": "[concat('#!/bin/bash\ndocker run --restart always -d -p 8080:8080 -e \"SQL_SERVER_FQDN=', parameters('sqlServerFQDN'),'\" -e \"SQL_SERVER_USERNAME=', parameters('sqlServerUser'),'\" -e \"SQL_SERVER_PASSWORD=', parameters('sqlServerPassword'),'\" --name api ', variables('containerImage'))]",
+      "customData": "[if(equals(parameters('vmType'),'kinvolk'), variables('kinvolk_customData'), variables('ubuntu_customData'))]"
+    },
+    "resources": [
+      {
+        "type": "Microsoft.Network/networkInterfaces",
+        "apiVersion": "2021-05-01",
+        "name": "[variables('networkInterfaceName')]",
+        "location": "[parameters('location')]",
+        "properties": {
+          "ipConfigurations": [
+            {
+              "name": "ipconfig1",
+              "properties": {
+                "subnet": {
+                  "id": "[concat(resourceGroup().id, '/providers/Microsoft.Network/virtualNetworks/', parameters('virtualNetworkName'), '/subnets/', parameters('subnetName'))]"
+                },
+                "privateIPAllocationMethod": "Dynamic"
+              }
+            }
+          ]
+        },
+        "dependsOn": []
+      },
+      {
+        "type": "Microsoft.Compute/virtualMachines",
+        "apiVersion": "2021-11-01",
+        "name": "[parameters('vmName')]",
+        "location": "[parameters('location')]",
+        "plan": "[if(equals(parameters('vmType'), 'kinvolk'), variables('kinvolk_plan'), json('null'))]",
+        "zones": "[if(empty(parameters('availabilityZone')),parameters('availabilityZone'),array(parameters('availabilityZone')))]",
+        "properties": {
+          "hardwareProfile": {
+            "vmSize": "[parameters('vmSize')]"
+          },
+          "storageProfile": {
+            "osDisk": {
+              "createOption": "FromImage",
+              "managedDisk": {
+                "storageAccountType": "[variables('osDiskType')]"
+              }
+            },
+            "imageReference": {
+              "publisher": "[variables('publisher')]",
+              "offer": "[variables('offer')]",
+              "sku": "[variables('sku')]",
+              "version": "[variables('version')]"
+            }
+          },
+          "networkProfile": {
+            "networkInterfaces": [
+              {
+                "id": "[resourceId('Microsoft.Network/networkInterfaces', variables('networkInterfaceName'))]"
+              }
+            ]
+          },
+          "osProfile": {
+            "computerName": "[parameters('vmName')]",
+            "customData": "[base64(variables('customData'))]",
+            "adminUsername": "[parameters('adminUsername')]",
+            "adminPassword": "[parameters('adminPassword')]"
+          }
+        },
+        "dependsOn": [
+          "[resourceId('Microsoft.Network/networkInterfaces', variables('networkInterfaceName'))]"
+        ]
+      }
+    ],
+    "outputs": {
+    }
+  }

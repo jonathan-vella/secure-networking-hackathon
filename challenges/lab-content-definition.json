@@ -1,0 +1,72 @@
+{
+  "Title": "Secure Networking Hackathon",
+  "Description": "Challenges for Secure Networking Hackathon",
+  "OverviewUrl": "00-overview.html",
+  "ContentVersion": "5.4",
+  "ContentPackage": {
+    "ContentItems": [
+      {
+        "Order": 1,
+        "Title": "Challenge-01:Build the foundation",
+        "Description": "The objective of this challenge is to ensure you understand Azure Virtual Networks, Azure connectivity capabilities, and how to establish a hybrid connection to Azure.",
+        "Url": "Challenge-01.html"
+      },
+      {
+        "Order": 2,
+        "Follows": 1,
+        "Title": "Challenge-02:Deploy the first application",
+        "Description": "The objective of this challenge is to ensure you understand how to design a network architecture that enables organizations to start as small as needed and scale alongside their business requirements.",
+        "Url": "Challenge-02.html"
+      },
+      {
+        "Order": 3,
+        "Follows": 2,
+        "Title": "Challenge-03:Design and implement network security",
+        "Description": "The objective of this challenge is to ensure you understand how to translate network security requirements into solutions.",
+        "Url": "Challenge-03.html"
+      },
+      {
+        "Order": 4,
+        "Follows": 3,
+        "Title": "Challenge-04:Design and implement web application security",
+        "Description": "The objective of this challenge is to ensure you understand how to integrate solutions into your design as it begins to scale.",
+        "Url": "Challenge-04.html"
+      },
+      {
+        "Order": 5,
+        "Follows": 4,
+        "Title": "Challenge-05:CMC goes global",
+        "Description": "The objective of this challenge is to ensure you understand how to integrate multiple regions into your design as it begins to scale.",
+        "Url": "Challenge-05.html"
+      },
+      {
+        "Order": 6,
+        "Follows": 5,
+        "Title": "Challenge-06:Secure access to Azure PaaS services",
+        "Description": "The objective of this challenge is to demonstrate your understanding of PaaS and DNS services available in Azure and how they can be securely integrated into a virtual network.",
+        "Url": "Challenge-06.html"
+      },
+      {
+        "Order": 7,
+        "Follows": 6,
+        "Title": "Challenge-07:Integrating name resolution between Azure and on-premises",
+        "Description": "The objective of this challenge is to understand how to manage and integrate your private DNS on-premises and in Azure. ",
+        "Url": "Challenge-07.html"
+      },
+      {
+        "Order": 8,
+        "Follows": 7,
+        "Title": "Challenge-08:Centrally manage Azure Virtual Networks at scale",
+        "Description": "The objective of this challenge is to understand how to achieve network management and security at scale.",
+        "Url": "Challenge-08.html"
+      },
+      {
+        "Order": 9,
+        "Follows": 8,
+        "Title": "Challenge-09:Retrospective - Looking back",
+        "Description": "The objective of this challenge is to reflect on design decisions and analyze the pros and cons of your solutions.",
+        "Url": "Challenge-09.html"
+      }
+    ]
+  }
+}
