@@ -18,8 +18,8 @@ sql_server_name=sqlserver$RANDOM
 sql_db_name=mydb
 sql_username=demouser
 sql_password='demo!pass123'
-web_template_uri='https://raw.githubusercontent.com/jonathan-vella/secure-networking-hackathon/hacker-assets/main/deploy_web_to_vm.json'
-api_template_uri='https://raw.githubusercontent.com/jonathan-vella/secure-networking-hackathon/hacker-assets/main/deploy_api_to_vm.json'
+web_template_uri='https://raw.githubusercontent.com/jonathan-vella/secure-networking-hackathon/main/hacker-assets/deploy_web_to_vm.json'
+api_template_uri='https://raw.githubusercontent.com/jonathan-vella/secure-networking-hackathon/main/hacker-assets/deploy_api_to_vm.json'
 
 # Create Resource Group and VNet
 echo "Creating RG and VNet..."

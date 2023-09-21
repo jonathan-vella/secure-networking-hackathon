@@ -28,7 +28,7 @@ vm_password='your_vm_password'
 sql_server_fqdn='fully_qualified_domain_name_of_a_SQL_server'
 sql_username='your_sql_server_username'
 sql_password='your_sql_server_password'
-api_template_uri='https://raw.githubusercontent.com/jonathan-vella/secure-networking-hackathon/hacker-assets/main/deploy_api_to_vm.json'
+api_template_uri='https://raw.githubusercontent.com/jonathan-vella/secure-networking-hackathon/main/hacker-assets/deploy_api_to_vm.json'
 
 # Create VM for API tier
 echo "Creating API VM..."
@@ -61,7 +61,7 @@ web_subnet_name='your_web_subnet'
 vm_username='demouser'
 vm_password='your_vm_password'
 api_ip_address='1.2.3.4'
-web_template_uri='https://raw.githubusercontent.com/jonathan-vella/secure-networking-hackathon/hacker-assets/main/deploy_web_to_vm.json'
+web_template_uri='https://raw.githubusercontent.com/jonathan-vella/secure-networking-hackathon/main/hacker-assets/deploy_web_to_vm.json'
 
 # Create VM for web tier
 echo "Creating web VM..."
