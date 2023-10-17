@@ -1,6 +1,6 @@
 # Secure Networking hackathon Artifacts
 
-You can find in this repository assets required for the Secure Networking hackathonto deploy the application required (you can find the source code for the application [here](https://github.com/Microsoft/YADA)).
+You can find in this repository assets required for the Secure Networking hackathon to deploy the application required (you can find the source code for the application [here](https://github.com/Microsoft/YADA)).
 
 ## hackathon Network Diagnostics (OHND) application
 
