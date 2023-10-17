@@ -1,5 +1,3 @@
-![Microsoft hackathon](images/hackathonLockupGraphicFY21.png "Microsoft hackathon")
-
 # Microsoft hackathon Bring your Own Subscription (BYOS)
 
 Bring your own subscription (BYOS) enables you to participate in a Microsoft hackathon using your own Azure subscription(s). The documentation in this repository provides guidance on how to setup each hackathon in your subscription as well as an overview of some of the differences you will see when interacting with the coach and attendee portals of hackathon when using your own subscription.
