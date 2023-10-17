@@ -16,7 +16,7 @@ For deploying the hackathon environment you will need one of the following:
 
 ## Deployment
 
-> Note: This script will often take 15-30 minutes on average to execute. Files are located in the [OnPrem](./OnPrem) folder
+> Note: This script will often take 30-45 minutes on average to execute. Files are located in the [OnPrem](./OnPrem) folder
 
 If using PowerShell:
 
