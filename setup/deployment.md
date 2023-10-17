@@ -26,7 +26,13 @@ If using PowerShell:
     Connect-AzAccount
     ```
 
-1.  Deploy the script
+2.  Set Azure subscription:
+
+    ```Powershell
+    Set-AzureSubscription -SubscriptionName "your-subscription-name"
+    ```
+    
+3.  Deploy the script
 
         ```Powershell
         $RGname = 'cmc-on-prem'
@@ -45,7 +51,13 @@ If using PowerShell:
 az login
 ```
 
-1. Deploy the script
+2.  Set Azure subscription:
+
+```sh
+az account set --subscription "your-subscription-name"
+```
+
+3. Deploy the script
 
 ```sh
  $RGname = 'cmc-on-prem'
