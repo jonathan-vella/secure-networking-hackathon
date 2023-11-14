@@ -1,6 +1,6 @@
 # Welcome to the *Secure Networking* hackathon
 
-Hello and welcome to the Secure-Networking hackathon, a challenge-oriented hack event from Microsoft. You will be presented with a series of challenges, each one more difficult than the one before.
+Hello and welcome to the 3-day Secure-Networking hackathon, a challenge-oriented hack event from Microsoft. You will be presented with a series of challenges, each one more difficult than the one before.
 
 During this hack your team will focus on designing and implementing networking solutions in Azure that meet the demanding needs of today’s global enterprise organizations. You will analyze the customers’ on-premises environment and design a secure networking solution for their workloads as they are migrated to Azure.
 
