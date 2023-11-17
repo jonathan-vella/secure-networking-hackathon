@@ -98,7 +98,7 @@
       },
       "deploySNMPContainer": {
         "type": "string",
-        "defaultValue": "yes",
+        "defaultValue": "no",
         "metadata": {
             "description": "Whether deploying an SNMP container or not, along the web appliation."
         },
