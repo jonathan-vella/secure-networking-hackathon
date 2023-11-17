@@ -20,10 +20,10 @@ The app architecture:
 
 ![Modern application diagram](images/app_webapp.png)
 
-- The web tier needs to be deployed with an Azure web app with this docker container image: securenetworkinghackathon/ohndweb:1.0 and the following configurations:
+- The web tier needs to be deployed with an Azure web app with this docker container image: erjosito/yadaapi:1.0 and the following configurations:
   - Linux OS
   - Under docker configuration select a single container, Docker hub as your image source
-- The app tier needs to be deployed with an Azure web app using this docker container image: securenetworkinghackathon/ohndapi:1.0 and the following configurations:
+- The app tier needs to be deployed with an Azure web app using this docker container image: erjosito/yadaweb:1.0 and the following configurations:
 
   - Linux OS
   - Under docker configuration select a single container, Docker hub as your image source
