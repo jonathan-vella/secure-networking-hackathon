@@ -55,12 +55,11 @@ To successfully complete this challenge as a team you must:
 - [Azure Networking products](https://azure.microsoft.com/products/category/networking/)
 - [Networking architectures](https://learn.microsoft.com/azure/architecture/guide/networking/networking-start-here#networking-architectures)
 - [Plan Azure Virtual Networks](https://learn.microsoft.com/azure/virtual-network/virtual-network-vnet-plan-design-arm)
+- [IP Address Planning](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/plan-for-ip-addressing)
 - [Hub-and-spoke network topology in Azure](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/hub-spoke)
 - [Hub-and-spoke network topology with Azure Virtual WAN](https://learn.microsoft.com/en-us/azure/architecture/networking/hub-spoke-vwan-architecture)
 - [Create site-to-site connections using Virtual WAN](https://learn.microsoft.com/en-us/azure/virtual-wan/virtual-wan-site-to-site-portal)
 - [Connect an on-premises network and a virtual network: S2S VPN](https://learn.microsoft.com/en-us/azure/vpn-gateway/tutorial-site-to-site-portal)
-- [Azure Virtual WAN overview](https://learn.microsoft.com/en-us/azure/virtual-wan/virtual-wan-about)
 - [Apply Zero Trust principles to Azure services](https://learn.microsoft.com/en-us/security/zero-trust/apply-zero-trust-azure-services-overview)
-- [IP Address Planning](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/plan-for-ip-addressing)
 
 _(c) Microsoft 2022_
