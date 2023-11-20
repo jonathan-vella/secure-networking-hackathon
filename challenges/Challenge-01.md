@@ -26,7 +26,8 @@ For testing the on-premises server can be accessed with the following username a
 ## Requirements
 
 - CMC requires an Azure networking IP address plan presented to them.
-- Design a virtual network solution that is scalable and secure as future workloads migrate, and new applications are designed in the cloud.
+- Solution must be scalable and secure. Solution must account for future workloads.
+- Solution must be aligned to the zero trust principles.
 - The primary Azure region CMC will use is East US.
 - Design cross-premises connectivity to the OHND App on-premises from any resources deployed on the Azure Vnet.
 - Plan and document network design and connectivity solution.
@@ -40,12 +41,12 @@ For testing the on-premises server can be accessed with the following username a
 
 To successfully complete this challenge as a team you must:
 
-- Present to your coach your virtual network design
-- Present the virtual network deployment in your subscription
+- Present to your coach your virtual network design. This must include at a network topology diagram and an IP address plan.
+- Present the virtual network deployment in your subscription (only deploy after you've agreed with both your coach and team your network design)
 - Present the cross-premises connection in your subscription
 - Validate your hybrid connection to the on-premises network from Azure
 - Implement a solution that alerts when the connectivity between Azure and on-premises is down
-- Discuss the decisions of the proposed solution that impact reliability and cost
+- Discuss the decisions of the proposed solution that impact security, reliability, and cost
 - Demonstrate secure remote access
 
 ## References
@@ -59,5 +60,7 @@ To successfully complete this challenge as a team you must:
 - [Create site-to-site connections using Virtual WAN](https://learn.microsoft.com/en-us/azure/virtual-wan/virtual-wan-site-to-site-portal)
 - [Connect an on-premises network and a virtual network: S2S VPN](https://learn.microsoft.com/en-us/azure/vpn-gateway/tutorial-site-to-site-portal)
 - [Azure Virtual WAN overview](https://learn.microsoft.com/en-us/azure/virtual-wan/virtual-wan-about)
+- [Apply Zero Trust principles to Azure services](https://learn.microsoft.com/en-us/security/zero-trust/apply-zero-trust-azure-services-overview)
+- [IP Address Planning](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/plan-for-ip-addressing)
 
 _(c) Microsoft 2022_
