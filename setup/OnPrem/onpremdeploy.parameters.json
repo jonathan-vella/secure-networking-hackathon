@@ -1,0 +1,93 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "adminUserName": {
+            "value": "HackerAdmin"
+        },
+        "adminPassword": {
+            "type": "securestring",
+            "defaultValue": "",
+            "metadata": {
+                "description": "The admin password for both the Windows and Linux virtual machines."
+            }
+        },
+        "mocOnpremNetwork": {
+            "value": {
+                "name": "network-cmc-onprem",
+                "addressPrefix": "10.0.0.0/16",
+                "subnetName": "mgmt",
+                "subnetPrefix": "10.0.1.128/25"
+            }
+        },
+        "mocOnpremGateway": {
+            "value": {
+                "name": "vpn-gateway-cmc-onprem",
+                "subnetName": "GatewaySubnet",
+                "subnetPrefix": "10.0.255.224/27",
+                "publicIPAddressName": "pip-onprem-vpn-gateway"
+            }
+        },
+        "sqldatabase": {
+            "value": {
+                "name": "sqlservervm",
+                "subnetName": "dataSubnet",
+                "subnetPrefix": "10.0.3.0/24"
+            }
+        },
+        "vmSize": {
+            "value": "Standard_D2s_v3"
+        },
+        "configureSitetosite": {
+            "value": true
+        },
+        "location": {
+            "value": "eastus"
+        },
+        "localNetworkGateway": {
+            "value": "local-gateway-cmc-onprem"
+        },
+        "localGatewayIpAddress": {
+            "value": "1.1.1.1"
+        },
+        "VpnGwBgpAsn": {
+            "value": 65001
+        },
+        "azureCloudVnetPrefix": {
+            "value": "10.1.0.0/16"
+        },
+        "virtualMachineName": {
+            "value": "sqlservervm"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_D2s_v3"
+        },
+        "imageOffer": {
+            "value": "sql2019-ws2019"
+        },
+        "sqlSku": {
+            "value": "SQLDEV"
+        },
+        "sqladminUsername": {
+            "value": "demouser"
+        },
+        "sqladminPassword": {
+            "value": "demo!pass123"
+        },
+        "storageWorkloadType": {
+            "value": "General"
+        },
+        "sqlDataDisksCount": {
+            "value": 1
+        },
+        "dataPath": {
+            "value": "F:\\SQLData"
+        },
+        "sqlLogDisksCount": {
+            "value": 1
+        },
+        "logPath": {
+            "value": "G:\\SQLLog"
+        }
+    }
+}

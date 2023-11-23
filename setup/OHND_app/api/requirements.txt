@@ -1,8 +1,0 @@
-flask
-dnspython
-requests
-pymysql
-pyodbc
-psycopg2
-azure-identity
-azure-keyvault-secrets
