@@ -115,7 +115,7 @@
             "product": "[variables('offer')]",
             "publisher": "[variables('publisher')]"
       },
-      "containerImage": "erjosito/yadaweb:1.0:1.0",
+      "containerImage": "erjosito/yadaweb:1.0",
       "snmpContainerImage": "erjosito/ubuntusnmpd:1.0",
       "networkInterfaceName": "[format('{0}-nic', parameters('vmName'))]",
       "osDiskType": "Standard_LRS",
