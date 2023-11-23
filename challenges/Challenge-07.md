@@ -18,6 +18,7 @@ The objective of this challenge is to understand how to manage and integrate you
 
 ## Success Criteria
 
+- Design your DNS solution. Solution must include at least 2 options for name resolution in the context of Private DNS & Private Endpoints in Azure. Discuss pros & cons with your coach.
 - Azure workloads can resolve on-prem names
 - On-prem workloads can resolve Azure workload names
 
