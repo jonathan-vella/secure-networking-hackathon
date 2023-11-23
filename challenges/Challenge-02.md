@@ -31,7 +31,6 @@ CMC has the following requirements:
 - Solution must enable the middle tier to communicate to external internet endpoints without attaching a public IP to any VM.
 - Solution components should take advantage of cloud resiliency to individually meet an SLA requirement of 99.99% when possible
 - The templates created by the Azure consultants will download container images from an online image repository, but they could not tell you more details about that.
-  - [ARM templates](https://github.com/jonathan-vella/secure-networking-hackathon/hacker-assets)
 
 ## Recommendations
 
