@@ -29,7 +29,7 @@ For testing the on-premises server can be accessed with the following username a
 - Solution must be scalable and secure. Solution must account for future workloads.
 - Solution must be aligned to the zero trust principles.
 - The primary Azure region CMC will use is East US.
-- Design cross-premises connectivity to the OHND App on-premises from any resources deployed on the Azure Vnet.
+- Design cross-premises connectivity for YADA, including on-premises and from any resources deployed on the Azure Vnet.
 - Plan and document network design and connectivity solution.
 - Design must include central access to shared services.
 - Deploy a test VM in the Azure virtual network for validation of connectivity.

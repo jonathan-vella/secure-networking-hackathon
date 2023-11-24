@@ -2,7 +2,7 @@
 
 ## Background
 
-The application team has asked for their OHND App to be the first project deployed on Azure. Your task is to deploy the web and application tiers reliably in Azure. This will be the first of many applications deployed. Be sure to plan your network design accordingly.
+The application team has asked to have YADA be the first project deployed on Azure. Your task is to deploy the web and application tiers reliably in Azure. This will be the first of many applications deployed. Be sure to plan your network design accordingly.
 
 The objective of this challenge is to ensure you understand how to design a network architecture that enables organizations to start as small as needed and scale alongside their business requirements.
 

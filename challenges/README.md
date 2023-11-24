@@ -1,6 +1,6 @@
 # Welcome to the _Secure Networking_ hackathon
 
-Hello and welcome to the Secure-Networking hackathon, a challenge-oriented hack event from Microsoft. You will be presented with a series of challenges, each one more difficult than the one before.
+Hello and welcome to the Secure Networking hackathon, a challenge-oriented hack event from Microsoft. You will be presented with a series of challenges, each one more difficult than the one before.
 
 During this hack your team will focus on designing and implementing networking solutions in Azure that meet the demanding needs of today’s global enterprise organizations. You will analyze the customers’ on-premises environment and design a secure networking solution for their workloads as they are migrated to Azure.
 
@@ -22,11 +22,11 @@ CMC had a team of Microsoft Azure Consultants evaluate their workloads and provi
 
 ## Architecture
 
-CMC uses several on-premises web applications to service loan applications today. One of these applications, OHND App, is a public-facing website where customers can make requests for mortgages, check the status of their mortgage application, and learn more about the company's offerings.
+CMC uses several on-premises web applications to service loan applications today. One of these applications, YADA, is a public-facing website where customers can make requests for mortgages, check the status of their mortgage application, and learn more about the company's offerings.
 
 As the existing applications are migrated and some modernized to PaaS your mission is to provide secure networking services in Azure to keep the applications accessible on the network.
 
-Contoso Mortgage Company wants to target the OHND App for deployment to Azure. This application consists of a web tier, an application (API) tier, and a data tier utilized by both the public-facing and employee-facing sites.
+Contoso Mortgage Company wants to target YADA for deployment to Azure. This application consists of a web tier, an application (API) tier, and a data tier utilized by both the public-facing and employee-facing sites.
 
 The different tiers are segmented and constrained in communication. The web front ends are accessible over port 80 to end-users. The application tier is only accessible over port 8080 by the respective web server, and the database tier is only accessible by the application tiers over port 1433. The web and application components have healthcheck endpoints that can be used for health monitoring:
 

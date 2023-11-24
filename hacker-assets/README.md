@@ -2,7 +2,7 @@
 
 You can find in this repository assets required for the Secure Networking hackathon to deploy the application required (you can find the source code for the application [here](https://github.com/Microsoft/YADA)).
 
-## hackathon Network Diagnostics (OHND) application
+## hackathon Network Diagnostics (YADA) application
 
 The Secure Networking hackathon uses the Network Diagnostics application (aka YADA) throughout all of the exercises. The application's tier components can be deployed via ARM templates to Azure virtual machines.
 

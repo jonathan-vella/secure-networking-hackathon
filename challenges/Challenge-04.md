@@ -8,7 +8,7 @@ The objective of this challenge is to ensure you understand how to integrate sol
 
 ## Challenge
 
-Due to regulatory compliance a web application firewall is required for any application hosted on the CMC network. CMC needs you to design a solution so all web applications including the existing OHND app can’t be directly exposed to the internet. The application team requires the original IP address of the application client to be visible to the application servers. They require web application firewalling, SSL offloading, and URL-based routing.
+Due to regulatory compliance a web application firewall is required for any application hosted on the CMC network. CMC needs you to design a solution so all web applications including YADA can’t be directly exposed to the internet. The application team requires the original IP address of the application client to be visible to the application servers. They require web application firewalling, SSL offloading, and URL-based routing.
 
 CMC wants to prevent DDoS and keep the app up and running. They want to prevent their website from crashing by incorporating application security measures.
 

@@ -8,14 +8,14 @@ The objective of this challenge is to ensure you understand how to integrate mul
 
 ## Challenge
 
-CMC is ready to deploy OHND in the United Kingdom – where their second largest customer base is. You are tasked with scaling the network to reach the new region and ensure user traffic can route to the application incorporating geolocation and performance.
+CMC is ready to deploy YADA in the United Kingdom – where their second largest customer base is. You are tasked with scaling the network to reach the new region and ensure user traffic can route to the application incorporating geolocation and performance.
 
 ## Requirements
 
 CMC has the following requirements:
 
 - Network presence in a new Azure region: UK South
-- The second instance of OHND has the same network security and application security requirements as the challenges before.
+- The second instance of YADA has the same network security and application security requirements as the challenges before.
   - WAF / SSL offloading
   - Firewall
   - On prem connectivity to database server
@@ -29,7 +29,7 @@ CMC has the following requirements:
 - Explain your design decisions based on the requirements above
 - Present the single URL for the app
 - Demonstrate how the solution would respond in the case of a regional outage from the end user perspective and from the azure administrator teams’ perspective that manages the workload
-- Validate second instance of OHND has access to the on-premises database
+- Validate second instance of YADA has access to the on-premises database
 
 ### Survey and Feedback
 

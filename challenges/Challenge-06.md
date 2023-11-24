@@ -10,7 +10,7 @@ The objective of this challenge is to demonstrate your understanding of PaaS and
 
 CMC needs you to ensure all PaaS services hosted on Azure that need to communicate to each other are leveraging the Microsoft Azure Backbone and do not go out to the public internet and back to the private network.
 
-A team of Azure consultants have strongly recommended modernizing the OHND application, your team has been tasked with executing their recommendation.
+A team of Azure consultants have strongly recommended modernizing YADA, and your team has been tasked with executing their recommendation.
 
 ## Requirements
 
