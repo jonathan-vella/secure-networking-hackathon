@@ -26,7 +26,7 @@ For testing the on-premises server can be accessed with the following username a
 ## Requirements
 
 - CMC requires an Azure networking IP address plan presented to them.
-- Solution must be scalable and secure. Solution must account for future workloads.
+- Solution must be scalable, secure, and resilient. Solution must account for future workloads.
 - Solution must be aligned to the zero trust principles.
 - The primary Azure region CMC will use is East US.
 - Design cross-premises connectivity for YADA, including on-premises and from any resources deployed on the Azure Vnet.
