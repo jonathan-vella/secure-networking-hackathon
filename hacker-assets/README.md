@@ -16,6 +16,8 @@ Here is an example of how to deploy SQL and the application tier to an Azure Vir
 
 # Bash script
 
+```bash
+
 # Resource Group Variables
 rg='your_resource_group'
 location='your_azure_region'
