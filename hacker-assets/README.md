@@ -14,12 +14,13 @@ For the application tier, the template needs the following parameters:
 
 Here is an example of how to deploy SQL and the application tier to an Azure Virtual machine:
 
-```bash
 # Bash script
 
-# Variables
+# Resource Group Variables
 rg='your_resource_group'
 location='your_azure_region'
+
+# SQL Server Variables (if you want to create Azure SQL instead of using the on-premises SQL deployment)
 sql_server_name=sqlserver$random_suffix
 sql_db_name=mydb
 sql_username=azure
@@ -32,14 +33,7 @@ az sql server create -n $sql_server_name -g $rg -l $location --admin-user "$sql_
 az sql db create -n $sql_db_name -s $sql_server_name -g $rg -e Basic -c 5 --no-wait -o none
 sql_server_fqdn=$(az sql server show -n $sql_server_name -g $rg -o tsv --query fullyQualifiedDomainName) && echo $sql_server_fqdn
 
-
-```bash
-# Bash script
-
-# Variables
-rg='your_resource_group'
-location='your_azure_region'
-
+# API Tier Variables
 vnet_name='your_vnet_name'
 api_subnet_name='your_app_subnet'
 vm_username='demouser'
@@ -47,6 +41,19 @@ vm_password='your_vm_password'
 sql_server_fqdn='fully_qualified_domain_name_of_a_SQL_server'
 api_template_uri='https://raw.githubusercontent.com/jonathan-vella/secure-networking-hackathon/main/hacker-assets/deploy_api_to_vm.json'
 
+# Create VM for API tier
+echo "Creating API VM..."
+az deployment group create -n appvm -g $rg --template-uri $api_template_uri \
+    --parameters vmName=api \
+                 adminUsername=$vm_username \
+                 adminPassword=$vm_password \
+                 virtualNetworkName=$vnet_name \
+                 sqlServerFQDN=$sql_server_fqdn \
+                 sqlServerUser=$sql_username \
+                 "sqlServerPassword=$sql_password" \
+                 subnetName=$api_subnet_name \
+                 availabilityZone=1
+                 
 # Create VM for API tier
 echo "Creating API VM..."
 az deployment group create -n appvm -g $rg --template-uri $api_template_uri \
