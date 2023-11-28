@@ -12,7 +12,26 @@ For the application tier, the template needs the following parameters:
 - SQL FQDN and credentials
 - Optionally an Availability Zone
 
-Here an example of how to deploy the application tier to an Azure Virtual machine:
+Here is an example of how to deploy SQL and the application tier to an Azure Virtual machine:
+
+```bash
+# Bash script
+
+# Variables
+rg='your_resource_group'
+location='your_azure_region'
+sql_server_name=sqlserver$random_suffix
+sql_db_name=mydb
+sql_username=azure
+sql_username='your_sql_server_username'
+sql_password='your_sql_server_password'
+
+# Create Azure SQL Server and database
+echo "Creating Azure SQL..."
+az sql server create -n $sql_server_name -g $rg -l $location --admin-user "$sql_username" --admin-password "$sql_password" -o none
+az sql db create -n $sql_db_name -s $sql_server_name -g $rg -e Basic -c 5 --no-wait -o none
+sql_server_fqdn=$(az sql server show -n $sql_server_name -g $rg -o tsv --query fullyQualifiedDomainName) && echo $sql_server_fqdn
+
 
 ```bash
 # Bash script
@@ -26,8 +45,6 @@ api_subnet_name='your_app_subnet'
 vm_username='demouser'
 vm_password='your_vm_password'
 sql_server_fqdn='fully_qualified_domain_name_of_a_SQL_server'
-sql_username='your_sql_server_username'
-sql_password='your_sql_server_password'
 api_template_uri='https://raw.githubusercontent.com/jonathan-vella/secure-networking-hackathon/main/hacker-assets/deploy_api_to_vm.json'
 
 # Create VM for API tier
