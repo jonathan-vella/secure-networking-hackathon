@@ -33,7 +33,7 @@ web_image='erjosito/yadaweb:1.0'
 
 # Accept image terms
 echo "Accepting image terms for $publisher:$offer:$sku..."
-az vm image terms accept -p $publisher -f $offer --plan $sku -o none
+az vm image terms accept -p $publisher -f $offer --plan $sku
 
 # Create API VMs
 # Create Cloud init file for API VMs
@@ -54,7 +54,7 @@ echo "Create API Virtual Machines..."
 for i in `seq 1 2`; do
 az vm create -n vm-yada-api$i -g $rg -l $location --image "${publisher}:${offer}:${sku}:${version}" --generate-ssh-keys --size $vm_size \
 --vnet-name $spoke_vnet_name --subnet $api_subnet_name --nsg "" --public-ip-address "" \
---availabilityZone=$i \
+--zone=$i \
 --custom-data $api_cloudinit_file -o none
 done
 
@@ -77,7 +77,7 @@ echo "Create Web Virtual Machines..."
 for i in `seq 1 2`; do
 az vm create -n vm-yada-web$i -g $rg -l $location --image "${publisher}:${offer}:${sku}:${version}" --generate-ssh-keys --size $vm_size \
 --vnet-name $spoke_vnet_name --subnet $web_subnet_name --nsg "" --public-ip-address "" \
---availabilityZone=$i \
+--zone=$i \
 --custom-data $web_cloudinit_file -o none
 done
   
