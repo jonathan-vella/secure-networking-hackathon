@@ -20,4 +20,12 @@ We do not provide guides or instructions to solve the challenges, just a few hin
 - Download and install the latest version of Azure CLI and the Azure PowerShell Module 
 - Install your choice of Integrated Development Environment (IDE) software, such as Visual Studio or Visual Studio Code
 
-*(c) Microsoft 2022*
+## Required Knowledge
+
+- [Microsoft Cloud Adoption Framework for Azure module on MS Learn](https://learn.microsoft.com/en-us/training/modules/microsoft-cloud-adoption-framework-for-azure/) (50min)
+- [Introduction to the Microsoft Azure Well-Architected Framework](https://learn.microsoft.com/en-us/training/modules/azure-well-architected-introduction/) (1hr)
+- [Fundamental knowledge of Azure Networking](https://learn.microsoft.com/en-us/training/paths/intro-to-azure-network-foundation-services/) (5hr)
+
+## Azure subscription requirements
+
+TBD
