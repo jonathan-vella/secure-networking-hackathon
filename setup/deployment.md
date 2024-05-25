@@ -29,7 +29,7 @@ If using PowerShell:
 2.  Set Azure subscription:
 
     ```Powershell
-    Set-AzureSubscription -SubscriptionName "your-subscription-name"
+    Set-AzContext -SubscriptionName "your-subscription-name"
     ```
     
 3.  Deploy the script
@@ -37,10 +37,11 @@ If using PowerShell:
         ```Powershell
         $RGname = 'cmc-on-prem'
         $location = 'eastus'
+        $templateuri = 'https://raw.githubusercontent.com/jonathan-vella/secure-networking-hackathon/main/setup/OnPrem/onpremdeploy.json'
 
         New-AzResourceGroup -Name $RGname -Location $location
 
-        New-AzResourceGroupDeployment -ResourceGroupName $RGname -TemplateFile onpremdeploy.json
+        New-AzResourceGroupDeployment -ResourceGroupName $RGname -TemplateFile $templateuri
         ```
 
     If using CLI
@@ -62,9 +63,10 @@ az account set --subscription "your-subscription-name"
 ```sh
  $RGname = 'cmc-on-prem'
  $location = 'eastus'
+ $templateuri = 'https://raw.githubusercontent.com/jonathan-vella/secure-networking-hackathon/main/setup/OnPrem/onpremdeploy.json'
 
 az group create --name $RGname --location $location
-az deployment group create --resource-group $RGname --template-file onpremdeploy.json
+az deployment group create --resource-group $RGname --template-uri $templateuri
 ```
 
 ## Provisioned Resources
