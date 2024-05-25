@@ -1,6 +1,6 @@
 # Secure Networking Artifacts
 
-You can use these commands to deploy the YADA app to an existing resource group (note that you need to update variables):
+You can use these commands to deploy the YADA app to an existing resource group (note that you need to update some of the variables):
 
 ```bash
 # Variables
