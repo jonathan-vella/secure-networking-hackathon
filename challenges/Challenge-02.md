@@ -34,7 +34,7 @@ CMC has the following requirements:
 
 ## Recommendations
 
-- Azure consultants have provided reusable ARM templates to automate the deployment of the application but have not configured the network design
+- Azure consultants have provided reusable Bash scripts to accelerate the deployment of the application but have not configured the network design. You can find the script [here](
 
   - web_template_uri='https://raw.githubusercontent.com/jonathan-vella/secure-networking-hackathon/main/hacker-assets/deploy_web_to_vm.json'
   - api_template_uri='https://raw.githubusercontent.com/jonathan-vella/secure-networking-hackathon/main/hacker-assets/deploy_api_to_vm.json'
