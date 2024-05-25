@@ -32,20 +32,17 @@ CMC has the following requirements:
 - Solution components should take advantage of cloud resiliency to individually meet an SLA requirement of 99.99% when possible
 - The templates created by the Azure consultants will download container images from an online image repository, but they could not tell you more details about that.
 
-## Recommendations
+## Notes
 
-- Azure consultants have provided reusable Bash scripts to accelerate the deployment of the application but have not configured the network design. You can find the script [here](
-
-  - web_template_uri='https://raw.githubusercontent.com/jonathan-vella/secure-networking-hackathon/main/hacker-assets/deploy_web_to_vm.json'
-  - api_template_uri='https://raw.githubusercontent.com/jonathan-vella/secure-networking-hackathon/main/hacker-assets/deploy_api_to_vm.json'
-
+- Azure consultants have provided reusable Bash scripts to accelerate the deployment of the application but have not configured the network design. You can find the script [here](../hacker-assets/challenge02.md).
 - Some caveats for the templates have been provided by the Azure consultants:
 
-  - These templates deploy virtual machines from the image "kinvolk:flatcar-container-linux-free:stable-gen2:latest". You might need to accept the terms for this image and change the existing Azure Policies applied to the subscription so that the templates work.
+  - These scripts deploy virtual machines based on an Ubuntu image. You might need to accept the terms for this image to work.
   - The Virtual Network needs to be in the same resource group as the VM being deployed through the template.
-  - The ARM template will only deploy a VM, but no network configuration around it such as Network Security Groups or public IP addresses.
+  - The script will only deploy the Virtual Machines, but no network configuration around it such as Network Security Groups or public IP addresses.
+  - The Virtual Machines need outbound internet access to download the container images.
 
-- In the ARM template the following parameters need to be specified for the API tier:
+- In the script the following parameters need to be specified for the API tier:
 
   - Name of the VM (`vmName`)
   - Admin credentials for the VM (`AdminUsername` and `AdminPassword`)
@@ -54,7 +51,7 @@ CMC has the following requirements:
   - SQL server credentials Username and Password (`sqlServerUser`, `sqlServerPassword`)
   - Optionally provide an availability zone (`availabilityZone`)
 
-- In the ARM template the following parameters need to be specified for the web tier:
+- In the script the following parameters need to be specified for the web tier:
   - VNet and Subnet name (`virtualNetworkName`, `subnetName`)
   - App tier URL (`apiUrl`)
   - Optionally provide an availability zone (`availabilityZone`)
@@ -76,5 +73,6 @@ To successfully complete this challenge as a team you must:
 - [Load-balancing options - Azure architecture center](https://learn.microsoft.com/azure/architecture/guide/technology-choices/load-balancing-overview)
 - [Azure regions and availability zones](https://learn.microsoft.com/azure/availability-zones/az-overview)
 - [What is Azure Virtual Network NAT](https://learn.microsoft.com/en-us/azure/virtual-network/nat-gateway/nat-overview)
+- [Az VM Image Terms](https://learn.microsoft.com/en-us/cli/azure/vm/image/terms?view=azure-cli-latest)
 
 _(c) Microsoft 2022_

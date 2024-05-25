@@ -25,7 +25,7 @@ db_subnet_name=DbSubnet
 db_subnet_prefix=10.30.3.0/24
 
 # Variables for SQL Server
-sql_server_name=sqlsrv-yada-eus001
+sql_server_name=server-ip-address
 sql_db_name=mydb
 sql_username=azure
 sql_password=WhoNeedsPasswords
