@@ -8,13 +8,13 @@ The objective of this challenge is to ensure you understand how to integrate mul
 
 ## Challenge
 
-CMC is ready to deploy YADA in the United Kingdom – where their second largest customer base is. You are tasked with scaling the network to reach the new region and ensure user traffic can route to the application incorporating geolocation and performance.
+CMC is ready to deploy YADA in Sweden – where their second largest customer base is. You are tasked with scaling the network to reach the new region and ensure user traffic can route to the application incorporating geolocation and performance.
 
 ## Requirements
 
 CMC has the following requirements:
 
-- Network presence in a new Azure region: UK South
+- Network presence in a new Azure region: Sweden Central
 - The second instance of YADA has the same network security and application security requirements as the challenges before.
   - WAF / SSL offloading
   - Firewall
