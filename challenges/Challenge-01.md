@@ -28,7 +28,7 @@ For testing the on-premises server can be accessed with the following username a
 - CMC requires an Azure networking IP address plan presented to them.
 - Solution must be scalable, secure, and resilient. Solution must account for future workloads.
 - Solution must be aligned to the zero trust principles.
-- The primary Azure region CMC will use is East US.
+- The primary Azure region CMC will use is North Europe.
 - Design cross-premises connectivity for YADA, including on-premises and from any resources deployed on the Azure Vnet.
 - Plan and document network design and connectivity solution.
 - Design must include central access to shared services.
@@ -42,12 +42,12 @@ For testing the on-premises server can be accessed with the following username a
 To successfully complete this challenge as a team you must:
 
 - Present to your coach your virtual network design. This must include at a network topology diagram and an IP address plan.
-- Present the virtual network deployment in your subscription (only deploy after you've agreed with both your coach and team your network design)
-- Present the cross-premises connection in your subscription
+- Present the virtual network deployment in your subscription (only deploy after you've agreed with both your coach and team your network design).
+- Present the cross-premises connection in your subscription.
 - Validate your hybrid connection to the on-premises network from Azure
-- Implement a solution that alerts when the connectivity between Azure and on-premises is down
-- Discuss the decisions of the proposed solution that impact security, reliability, and cost
-- Demonstrate secure remote access
+- Implement a solution that alerts when the connectivity between Azure and on-premises is down.
+- Discuss the decisions of the proposed solution that impact security, reliability, and cost.
+- Demonstrate secure remote access.
 
 ## References
 

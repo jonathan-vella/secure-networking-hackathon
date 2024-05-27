@@ -23,26 +23,24 @@ The app architecture:
 - The web tier needs to be deployed with an Azure web app with this docker container image: erjosito/yadaweb:1.0 and the following configurations:
   - Linux OS
   - Under docker configuration select a single container, Docker hub as your image source
-- The app tier needs to be deployed with an Azure web app using this docker container image: erjosito/yadaapi:1.0 and the following configurations:
-
-  - Linux OS
-  - Under docker configuration select a single container, Docker hub as your image source
-
-- Web app can’t be directly exposed to the internet, users must be directed through a WAF before accessing the application
-- Ensure clients can’t bypass the firewall by using \*.azurewebsites.net
-- Azure SQL database with SQL authentication, Basic service tier, locally redundant storage
+- The app tier will be modernized at a later stage.
+- The web app can’t be directly exposed to the internet, and all users must be directed through a WAF before accessing the application
+- With the exception of Azure Firewall, no other public IP addresses should be used
+- Ensure that clients can’t bypass the firewall by using \*.azurewebsites.net
+- An Azure SQL database with SQL authentication in the S0 tier with locally redundant storage
 - The Database should not be publicly accessible and needs to be only accessible with a private IP
 - Ensure a secure connection policy
 - The Azure SQL DB requires Private DNS integration
 - Encrypt connections
-- No need to populate the database the DBAs will do that once you have secured the Azure SQL DB to the network
+- There is no need to populate the database since the DBAs will do that once you have secured the Azure SQL DB to the network
 
 ## Success Criteria
 
-- Present updated environment diagram
-- Verify users in various regions are directed to the closest workload and simulate regional failure
-- Ensure that the app tier is using private IP address to access the DB and not able to access public IP
-- DNS concepts should be understood and explained in the solution
+- Present an updated environment diagram.
+- EWith the exception of Azure Firewall, no other public IP addresses should be used
+- Verify users in various regions are directed to the closest workload.
+- Ensure that the app tier is using a private IP address to access the DB and not able to access the public IP of your Azure SQL DB.
+- DNS concepts should be understood and explained in the solution.
 
 ## References
 

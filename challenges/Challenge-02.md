@@ -60,11 +60,11 @@ CMC has the following requirements:
 
 To successfully complete this challenge as a team you must:
 
-- Present updated environment diagram with network segmentation
-- Demonstrate application load balancing in real time
-- Validate application is highly available and traffic is redirected in the case of an outage
-- Validate application can communicate to the database on prem
-- Validate application is working correctly and can access the internet to get its Public IP address
+- Present an updated environment diagram with network segmentation.
+- Demonstrate application load balancing in real time.
+  - Validate application is highly available and traffic is redirected in the case of an outage.
+  - Validate application can communicate to the database on premises.
+  - Validate application is working correctly and can access the internet to get its Public IP address
 - Justify the cost of your solution to your coach
 - Present the metrics to show the front end and backend availability is 100%
 

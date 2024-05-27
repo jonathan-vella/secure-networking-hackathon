@@ -18,9 +18,9 @@ You need to make sure that the firewall is inspecting all Internet traffic from 
 
 CMC has the following requirements:
 
-- Log IP traffic flowing though the network security solution
+- Log IP traffic flowing though the network security solution. 
 - Generate insights into the traffic flow of the Azure virtual networks
-- Require ingress traffic inspected by a firewall
+- Require ingress traffic inspected by a network firewall.
 - Prevent data exfiltration
 - Ensure the web layer is only accessible to inbound traffic from the internet that has been inspected
 - Ensure app layer only receives traffic from the web layer and can communicate to the database on prem
@@ -30,12 +30,12 @@ CMC has the following requirements:
 
 ## Success Criteria
 
-- Present updated environment diagram
+- Present updated environment diagram. Your diagram must depict clearly the flow and traffic including routing.
 - Present Firewall logs and demonstrate that traffic traverses the firewall.
-- Present NSG flow logs and show if there are any malicious IPs trying to access the application
-- Present insights that visualize the traffic activity of the application
+- Present NSG flow logs and show if there are any malicious IPs trying to access the application.
+- Present insights that visualize the traffic activity of the application.
 - Ensure the spoke VMs can reach each other with the added security measures in place.
-- Ensure the VMs are not accessible on any nonrequired TCP or UDP port.
+- Ensure the VMs are not accessible on any non-required TCP or UDP port.
 - Validate that the firewall inspects traffic from any VM in the hub or the spoke going to the public Internet or to another spoke.
 - Validate that the firewall inspects traffic from any on-premises client going to the hub or any spokes.
 - Identify the client source IP as seen by each web server and explain it.
