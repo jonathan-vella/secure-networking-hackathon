@@ -23,6 +23,7 @@ CMC has the following requirements:
 - The web application can't be directly exposed to the internet.
 - The solution should be a reliable service with built-in availability and redundancy.
 - Ensure that malicious users can’t bypass the WAF, irrespective of their location.
+- Prevent DDoS attacks while keeping the cost low.
 
 ## Success Criteria
 
@@ -33,6 +34,7 @@ CMC has the following requirements:
 - Explain how DDoS attacks are being prevented in the CMC environment.
 - Demo how your solution is designed to prevent any malicious users from bypassing the WAF.
 - Inbound traffic is encrypted.
+- DDos prevention is in place.
 
 ## References
 

@@ -37,8 +37,9 @@ The app architecture:
 ## Success Criteria
 
 - Present an updated environment diagram.
-- EWith the exception of Azure Firewall, no other public IP addresses should be used
-- Verify users in various regions are directed to the closest workload.
+- Ensure that With the exception of Azure Firewall, no other public IP addresses are in use.
+- Verify that users in various regions are directed to the closest workload.
+- Simulate a regional outage and verify that traffic is redirected to the next closest region.
 - Ensure that the app tier is using a private IP address to access the DB and not able to access the public IP of your Azure SQL DB.
 - DNS concepts should be understood and explained in the solution.
 
