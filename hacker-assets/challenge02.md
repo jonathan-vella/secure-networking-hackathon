@@ -4,7 +4,6 @@
 You can use these commands to deploy the YADA app to an existing resource group (note that you need to update some of the variables):
 
 ```bash
-# Variables
 ######## Deploy YADA ########
 
 ########--------------------------########
@@ -106,7 +105,6 @@ done
 The above requires Ubuntu. If you are having issues related to Marketplace offer acceptance, you can use the commands below to deploy the YADA app in an Azure VM with [Kinvolk Flatcar](https://kinvolk.io/) to an existing resource group (note that you need to update some of the variables):
 
 ```bash
-# Variables
 ######## Deploy YADA ########
 
 ########--------------------------########
