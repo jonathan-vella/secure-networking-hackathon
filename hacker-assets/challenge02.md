@@ -15,14 +15,10 @@ location=your-location
 # Set Variables for Spoke Network
 spoke_vnet_name=vnet-spoke-eus001
 spoke_vnet_prefix=10.30.0.0/21
-waf_subnet_name=WafSubnet
-waf_subnet_prefix=10.30.0.0/24
 web_subnet_name=WebSubnet
 web_subnet_prefix=10.30.1.0/24
 api_subnet_name=ApiSubnet
 api_subnet_prefix=10.30.2.0/24
-db_subnet_name=DbSubnet
-db_subnet_prefix=10.30.3.0/24
 
 # Variables for SQL Server
 sql_server_name=server-ip-address
@@ -39,6 +35,14 @@ vm_size=Standard_D2s_v5 # Depending on your scenario you may want to use a diffe
 ilb_api=10.30.2.10 # Update this with the private IP address of the Internal Load Balancer for the API tier
 api_image='erjosito/yadaapi:1.0'
 web_image='erjosito/yadaweb:1.0'
+
+########--------------------------########
+
+# Deploy Virtual Network for YADA
+
+az network vnet create -g $rg -n $spoke_vnet_name --address-prefix $spoke_vnet_prefix -l $location
+az network vnet subnet create -g $rg -n $web_subnet_name --vnet-name $spoke_vnet_name --address-prefix $web_subnet_prefix
+az network vnet subnet create -g $rg -n $api_subnet_name --vnet-name $spoke_vnet_name --address-prefix $api_subnet_prefix
 
 ########--------------------------########
 
@@ -116,14 +120,10 @@ location=your-location
 # Set Variables for Spoke Network
 spoke_vnet_name=vnet-spoke-eus001
 spoke_vnet_prefix=10.30.0.0/21
-waf_subnet_name=WafSubnet
-waf_subnet_prefix=10.30.0.0/24
 web_subnet_name=WebSubnet
 web_subnet_prefix=10.30.1.0/24
 api_subnet_name=ApiSubnet
 api_subnet_prefix=10.30.2.0/24
-db_subnet_name=DbSubnet
-db_subnet_prefix=10.30.3.0/24
 
 # Variables for SQL Server
 sql_server_name=server-ip-address
@@ -140,6 +140,14 @@ vm_size=Standard_D2s_v5 # Depending on your scenario you may want to use a diffe
 ilb_api=10.30.2.10 # Update this with the private IP address of the Internal Load Balancer for the API tier
 api_image='erjosito/yadaapi:1.0'
 web_image='erjosito/yadaweb:1.0'
+
+########--------------------------########
+
+# Deploy Virtual Network for YADA
+
+az network vnet create -g $rg -n $spoke_vnet_name --address-prefix $spoke_vnet_prefix -l $location
+az network vnet subnet create -g $rg -n $web_subnet_name --vnet-name $spoke_vnet_name --address-prefix $web_subnet_prefix
+az network vnet subnet create -g $rg -n $api_subnet_name --vnet-name $spoke_vnet_name --address-prefix $api_subnet_prefix
 
 ########--------------------------########
 
