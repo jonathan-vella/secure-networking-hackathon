@@ -69,7 +69,7 @@ EOF
 # Create API Virtual Machines
 echo "Create API Virtual Machines..."
 for i in `seq 1 2`; do
-az vm create -n vm-yada-apib$i -g $rg -l $location --image "${publisher}:${offer}:${sku}:${version}" --generate-ssh-keys --size $vm_size \
+az vm create -n vm-yada-api$i -g $rg -l $location --image "${publisher}:${offer}:${sku}:${version}" --generate-ssh-keys --size $vm_size \
 --vnet-name $spoke_vnet_name --subnet $api_subnet_name --nsg "" --public-ip-address "" \
 --zone=$i \
 --custom-data $api_cloudinit_file -o none
@@ -165,7 +165,7 @@ EOF
 # Create API Virtual Machines
 echo "Create API Virtual Machines..."
 for i in `seq 1 2`; do
-az vm create -n vm-yada-apib$i -g $rg -l $location --image "${publisher}:${offer}:${sku}:${version}" --generate-ssh-keys --size $vm_size \
+az vm create -n vm-yada-api$i -g $rg -l $location --image "${publisher}:${offer}:${sku}:${version}" --generate-ssh-keys --size $vm_size \
 --vnet-name $spoke_vnet_name --subnet $api_subnet_name --nsg "" --public-ip-address "" \
 --zone=$i \
 --security-type Standard \
