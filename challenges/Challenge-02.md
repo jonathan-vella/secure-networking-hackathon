@@ -14,7 +14,7 @@ The front end is a public facing web server, middle tier is a REST API. The appl
 
 CMC has gone viral and has experienced unprecedented growth and the networking team has identified sporadic timeouts in outbound connections. In this challenge, you will also need to increase scalability of outbound connections to prevent application timeouts.
 
-At this point the application is not a critical asset for CMC, implementing network security is not a requirement to fulfill this challenge.
+At this point the application is not a critical asset for CMC and implementing network security is not a requirement to fulfill this challenge.
 
 Work with your team to plan and deploy a solution.
 
@@ -27,19 +27,19 @@ CMC has the following requirements:
 - The application requires a load balancing solution that can direct requests to the available endpoints to ensure application availability.
 - The application needs to be able to communicate to the database resources on premises (the username is `demouser`, the password is `demo!pass123`).
 - The application should be resilient to single VM failures.
-- Solution should be a cost-effective solution leveraging cloud native tools
-- Solution must enable the middle tier to communicate to external internet endpoints without attaching a public IP to any VM.
-- Solution components should take advantage of cloud resiliency to individually meet an SLA requirement of 99.99% when possible
-- The templates created by the Azure consultants will download container images from an online image repository, but they could not tell you more details about that.
+- The solution should be a cost-effective solution leveraging cloud native tools
+- The solution must enable the middle tier to communicate to external internet endpoints without attaching a public IP to any VM.
+- The solution components should take advantage of cloud resiliency to individually meet an SLA requirement of 99.99% when possible
+- The scripts created by the Azure consultants will download container images from an online image repository, but they could not tell you more details about that.
 
 ## Notes
 
 - Azure consultants have provided reusable Bash scripts to accelerate the deployment of the application but have not configured the network design. You can find the script [here](../hacker-assets/challenge02.md).
-- Some caveats for the templates have been provided by the Azure consultants:
+- Some caveats for the scripts which have been provided by the Azure consultants:
 
-  - These scripts deploy virtual machines based on an Ubuntu image. You might need to accept the terms for this image to work.
-  - The Virtual Network needs to be in the same resource group as the VM being deployed through the template.
-  - The script will only deploy the Virtual Machines, but no network configuration around it such as Network Security Groups or public IP addresses.
+  - These scripts deploy virtual machines based on particular OS images. You might need to accept the terms for these images to work.
+  - The Virtual Network needs to be in the same resource group as the VMs being deployed by the script.
+  - The script will only deploy the Virtual Machines. Network configurations related to NSGs, Public IPs, Load Balancing, etc. are not included.
   - The Virtual Machines need outbound internet access to download the container images.
 
 - In the script the following parameters need to be specified for the API tier:
@@ -60,13 +60,13 @@ CMC has the following requirements:
 
 To successfully complete this challenge as a team you must:
 
-- Present an updated environment diagram with network segmentation.
+- Present an updated environment diagram which includes network segmentation.
 - Demonstrate application load balancing in real time.
   - Validate application is highly available and traffic is redirected in the case of an outage.
   - Validate application can communicate to the database on premises.
-  - Validate application is working correctly and can access the internet to get its Public IP address
-- Justify the cost of your solution to your coach
-- Present the metrics to show the front end and backend availability is 100%
+  - Validate application is working correctly and can access the internet to get its Public IP address.
+- Justify the cost of your solution to your coach.
+- Present the metrics to show the front end and backend availability is 100%.
 
 ## References
 
