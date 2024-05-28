@@ -18,7 +18,7 @@ The following on-premises resources can be used to connect to Azure:
 
 ![CMC on-premises network diagram](images/on-premises.png)
 
-For testing the on-premises server can be accessed with the following username and password:
+For testing the on-premises server (not the SQL Server!) can be accessed with the following username and password:
 
     - HackerAdmin
     - demo!pass123
