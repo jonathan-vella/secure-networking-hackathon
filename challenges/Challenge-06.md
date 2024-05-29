@@ -25,7 +25,7 @@ The app architecture:
   - Under docker configuration select a single container, Docker hub as your image source
 - The app tier will be modernized at a later stage.
 - The web app can’t be directly exposed to the internet, and all users must be directed through a WAF before accessing the application
-- With the exception of Azure Firewall, no other public IP addresses should be used
+- With the exception of Azure Firewall, no other public IP addresses should be used. This also applies to the regional WAF.
 - Ensure that clients can’t bypass the firewall by using \*.azurewebsites.net
 - An Azure SQL database with SQL authentication in the S0 tier with locally redundant storage
 - The Database should not be publicly accessible and needs to be only accessible with a private IP
