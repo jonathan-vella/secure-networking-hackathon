@@ -34,7 +34,7 @@ CMC has the following requirements:
 - Present Firewall logs and demonstrate that traffic traverses the firewall.
 - Present NSG flow logs and show if there are any malicious IPs trying to access the application.
 - Present insights that visualize the traffic activity of the application.
-- Ensure the spoke VMs can reach each other with the added security measures in place.
+- Ensure the spoke VMs can reach each other networks with the added security measures in place.
 - Ensure the VMs are not accessible on any non-required TCP or UDP port.
 - Validate that the firewall inspects traffic from any VM in the hub or the spoke going to the public Internet or to another spoke.
 - Validate that the firewall inspects traffic from any on-premises client going to the hub or any spokes.
