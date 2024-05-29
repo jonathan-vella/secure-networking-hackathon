@@ -16,10 +16,8 @@ CMC wants to prevent DDoS and keep the app up and running. They want to prevent 
 
 CMC has the following requirements:
 
-- SSL offloading.
 - A Web Application Firewall needs to be included in the design to protect web application from web-based security vulnerabilities.
 - The original IP address of the application client needs to be visible to the application servers.
-- Traffic from the public internet should always be encrypted with SSL.
 - The web application can't be directly exposed to the internet.
 - The solution should be a reliable service with built-in availability and redundancy.
 - Ensure that malicious users can’t bypass the WAF, irrespective of their location.
@@ -31,10 +29,8 @@ CMC has the following requirements:
 - Present an updated environment diagram.
 - Inbound traffic must traverse the WAF, outbound traffic must still go via the firewall.
 - Explain how you arrived at your design decisions based on the requirements above.
-- Show your coach how your solution is configured for SSL offloading and web application firewalling.
 - Explain how DDoS attacks are being prevented in the CMC environment.
 - Demo how your solution is designed to prevent any malicious users from bypassing the WAF.
-- Inbound traffic is encrypted.
 - DDos prevention is in place.
 
 ## References
