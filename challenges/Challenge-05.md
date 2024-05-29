@@ -15,23 +15,14 @@ CMC is ready to deploy YADA in Sweden – where their second largest customer ba
 CMC has the following requirements:
 
 - Network presence in a new Azure region: Sweden Central
-- The second instance of YADA has the same network security and application security requirements as the challenges before.
-  - WAF / SSL offloading
-  - Firewall
-  - On prem connectivity to database server
+- The revised requirements for both instances now includes a WAF at a global level and mandatory SSL offloading. These are on top of the requirements described in the previous challenge.
+- On prem connectivity to database server
 - Optimize the traffic routing based on geo-location and performance
 - Ensure end-users can still access the application in the case of a regional outage
 - All users should be using a single URL regardless of what region they are accessing the application from
+- Incoming traffic (i.e., global to regional) should only be allowed to originate from CMC's global resources deployed in Azure.
 
-If time is a constraint, the following requirements apply:
-
-- Network presence in a new Azure region: Sweden Central
-- The second instance of YADA has the same network security and application security requirements as the challenges before.
-  - WAF / SSL offloading
-  - On prem connectivity to the database server via VNET peering
-- Optimize the traffic routing based on geo-location and performance
-- Ensure end-users can still access the application in the case of a regional outage
-- All users should be using a single URL regardless of what region they are accessing the application from
+If time is a constraint, you can create a new VNET in Sweden Central and use VNET Peering to the VNET representing the on-premises network.
 
 ## Success Criteria
 
