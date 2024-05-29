@@ -21,7 +21,7 @@ api_subnet_name=ApiSubnet
 api_subnet_prefix=10.30.2.0/24
 
 # Variables for SQL Server
-sql_server_name=server-ip-address
+sql_server_fqdn=server-ip-address # use either IP address or FQDN
 sql_db_name=mydb
 sql_username=azure
 sql_password=WhoNeedsPasswords
@@ -132,7 +132,7 @@ api_subnet_name=ApiSubnet
 api_subnet_prefix=10.30.2.0/24
 
 # Variables for SQL Server
-sql_server_name=server-ip-address
+sql_server_fqdn=server-ip-address
 sql_db_name=mydb
 sql_username=azure
 sql_password=WhoNeedsPasswords
