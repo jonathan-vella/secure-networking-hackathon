@@ -23,6 +23,16 @@ CMC has the following requirements:
 - Ensure end-users can still access the application in the case of a regional outage
 - All users should be using a single URL regardless of what region they are accessing the application from
 
+If time is a constraint, the following requirements apply:
+
+- Network presence in a new Azure region: Sweden Central
+- The second instance of YADA has the same network security and application security requirements as the challenges before.
+  - WAF / SSL offloading
+  - On prem connectivity to the database server via VNET peering
+- Optimize the traffic routing based on geo-location and performance
+- Ensure end-users can still access the application in the case of a regional outage
+- All users should be using a single URL regardless of what region they are accessing the application from
+
 ## Success Criteria
 
 - Present to your coach CMCs global network design with an updated environment diagram.
