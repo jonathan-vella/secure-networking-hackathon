@@ -24,6 +24,7 @@ CMC has the following requirements:
 - The solution should be a reliable service with built-in availability and redundancy.
 - Ensure that malicious users can’t bypass the WAF, irrespective of their location.
 - Prevent DDoS attacks while keeping the cost low.
+- There is no requirement to hit the web front end from any CMC's private networks.
 
 ## Success Criteria
 
