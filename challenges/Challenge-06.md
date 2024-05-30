@@ -20,7 +20,7 @@ The app architecture:
 
 ![Modern application diagram](images/app_webapp.png)
 
-- The Web tier and the API tier need to be deployed as containerized Azure Web App. You can use the guidance located [here](https://github.com/microsoft/YADA/blob/main/deploy/webapp.md) to deploy both tiers in Azure App Service.
+- The Web tier and the API tier need to be deployed as containerized Azure Web App. You can use the guidance located [here](../hacker-assets/sol_challenge06.md). to deploy both tiers in Azure App Service.
 - The web app can’t be directly exposed to the internet, and all users must be directed through a WAF before accessing the application.
 - Ensure that clients can’t bypass the firewall by using \*.azurewebsites.net
 - At this stage, CMS decided to use an Azure SQL database with SQL authentication in the S0 tier with locally redundant storage. The Database should not be publicly accessible and needs to be only accessible with a private IP using a DNS name.
