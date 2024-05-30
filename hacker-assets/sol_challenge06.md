@@ -7,10 +7,13 @@ If you don't have a database, you can deploy one using SQL Server:
 ```bash
 
 # YADA - Web App version
-# Set Variables
+
+# Create a random suffix
 suffix=$(head /dev/urandom | tr -dc a-z0-9 | head -c 5 ; echo '')
-rg=<Add your Resource Group>
-location=<Add location> 
+
+# Define Variables
+rg=rg-yada-neu01
+location="northeurope"
 sql_server_name=sqlsrv$suffix
 sql_db_name=mydb
 sql_username=azure
