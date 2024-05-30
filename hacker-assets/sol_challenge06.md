@@ -1,6 +1,6 @@
 # YADA - Deployment on Azure App Services
 
-In the [YADA GitHub repo](https:// github.com/microsoft/YADA)you can find additional information about YADA web and API components. In the following example you can find the simplest deployment of the YADA app using Azure Web Apps for the web and API tiers, and Azure SQL Database for the data tier.
+In the [YADA GitHub repo](https://github.com/microsoft/YADA) you can find additional information about YADA web and API components. In the following example you can find the simplest deployment of the YADA app using Azure Web Apps for the web and API tiers, and Azure SQL Database for the data tier.
 
 If you don't have a database, you can deploy one using SQL Server:
 
