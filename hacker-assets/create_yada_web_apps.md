@@ -5,12 +5,12 @@
 # YADA - Web App version
 # Set Variables
 random_suffix=$RANDOM
-rg=rgyada$random_suffix
-location=eastus
+rg=<Add your Resource Group>
+location=<Add location> 
 sql_server_name=sqlsrv$randomsuffix
 sql_db_name=mydb
-sql_username=azure
-sql_password=$(openssl rand -base64 10)  # 10-character random password
+sql_username=demouser
+sql_password='demo!pass123'  # 10-character random password
 api_image='erjosito/yadaapi:1.0'
 web_image='erjosito/yadaweb:1.0'
 
