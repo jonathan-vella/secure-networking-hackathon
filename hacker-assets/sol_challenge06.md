@@ -4,10 +4,10 @@
 
 # YADA - Web App version
 # Set Variables
-random_suffix=$RANDOM
+suffix=$(head /dev/urandom | tr -dc a-z0-9 | head -c 5 ; echo '')
 rg=<Add your Resource Group>
 location=<Add location> 
-sql_server_name=sqlsrv$randomsuffix
+sql_server_name=sqlsrv$suffix
 sql_db_name=mydb
 sql_username=demouser
 sql_password='demo!pass123'  # 10-character random password
@@ -27,7 +27,7 @@ sql_server_fqdn=$(az sql server show -n $sql_server_name -g $rg -o tsv --query f
 # Run API on Web App
 svcplan_name=webappplan
 svcplan_sku=S1
-app_name_api=api-$random_suffix
+app_name_api=api-$suffix
 echo "Creating webapp for API..."
 az appservice plan create -n $svcplan_name -g $rg --sku $svcplan_sku --is-linux -o none
 az webapp create -n $app_name_api -g $rg -p $svcplan_name --deployment-container-image-name $api_image -o none
@@ -40,7 +40,7 @@ api_egress_ip=$(curl -s "https://${app_url_api}/api/ip" | jq -r .my_public_ip)
 az sql server firewall-rule create -g "$rg" -s "$sql_server_name" -n public_api_aci-source --start-ip-address "$api_egress_ip" --end-ip-address "$api_egress_ip"
 
 # Run on Web App
-app_name_web=web-$random_suffix
+app_name_web=web-$suffix
 echo "Creating webapp for frontend..."
 az webapp create -n $app_name_web -g $rg -p $svcplan_name --deployment-container-image-name $web_image -o none
 az webapp config appsettings set -n $app_name_web -g $rg --settings "API_URL=https://api-12632.azurewebsites.net" -o none
