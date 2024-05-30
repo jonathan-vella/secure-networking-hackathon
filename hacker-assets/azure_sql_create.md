@@ -4,12 +4,15 @@
 
 # Create Azure SQL Server and database
 
+# Create a random suffix
+suffix=$(head /dev/urandom | tr -dc a-z0-9 | head -c 5 ; echo '')
+
 # Set Variables for Resource Group 
 rg='your_resource_group'
 location='your_azure_region'
 
 # Set Variables for SQL Server
-sql_server_name=sqlsrv$random_suffix
+sql_server_name=sqlsrv$suffix
 sql_db_name=mydb
 sql_username=azure
 sql_password=$(openssl rand -base64 10)  # 10-character random password
