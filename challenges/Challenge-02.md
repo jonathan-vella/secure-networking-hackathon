@@ -34,7 +34,7 @@ CMC has the following requirements:
 
 ## Notes
 
-- Azure consultants have provided reusable Bash scripts to accelerate the deployment of the application but have not configured the network design. You can find the script [here](../hacker-assets/challenge02.md).
+- Azure consultants have provided reusable Bash scripts to accelerate the deployment of the application but have not configured the network design. You can find the script [here](../hacker-assets/sol_challenge02.md).
 - Some caveats for the scripts which have been provided by the Azure consultants:
 
   - These scripts deploy virtual machines based on particular OS images. You might need to accept the terms for these images to work.

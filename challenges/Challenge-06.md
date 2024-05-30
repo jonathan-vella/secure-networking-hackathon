@@ -20,7 +20,7 @@ The app architecture:
 
 ![Modern application diagram](images/app_webapp.png)
 
-- The web tier and the api tier need to be deployed as containerized Azure Web App. You can use the guidance located [here](https://github.com/microsoft/YADA/blob/main/deploy/webapp.md) to deploy both tiers in Azure App Service.
+- The web tier and the api tier need to be deployed as containerized Azure Web App. You can use the guidance located [here](../hacker-assets/sol_challenge06.md) to deploy both tiers in Azure App Service.
 - The web app can’t be directly exposed to the internet, and all users must be directed through a WAF before accessing the application
 - Ensure that clients can’t bypass the firewall by using \*.azurewebsites.net
 - An Azure SQL database with SQL authentication in the S0 tier with locally redundant storage
