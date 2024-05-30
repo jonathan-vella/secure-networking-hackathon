@@ -20,12 +20,8 @@ The app architecture:
 
 ![Modern application diagram](images/app_webapp.png)
 
-- The web tier needs to be deployed with an Azure web app with this docker container image: erjosito/yadaweb:1.0 and the following configurations:
-  - Linux OS
-  - Under docker configuration select a single container, Docker hub as your image source
-- The app tier will be modernized at a later stage.
+- The web tier and the api tier need to be deployed as containerized Azure Web App. You can use the guidance located [here](https://github.com/microsoft/YADA/blob/main/deploy/webapp.md) to deploy both tiers in Azure App Service.
 - The web app can’t be directly exposed to the internet, and all users must be directed through a WAF before accessing the application
-- With the exception of Azure Firewall and the VPN Gateway, no other public IP addresses should be used. This also applies to the regional WAF.
 - Ensure that clients can’t bypass the firewall by using \*.azurewebsites.net
 - An Azure SQL database with SQL authentication in the S0 tier with locally redundant storage
 - The Database should not be publicly accessible and needs to be only accessible with a private IP
@@ -37,11 +33,11 @@ The app architecture:
 ## Success Criteria
 
 - Present an updated environment diagram.
-- Ensure that With the exception of Azure Firewall and VPN Gateway, no other public IP addresses are in use.
 - Verify that users in various regions are directed to the closest workload.
 - Simulate a regional outage and verify that traffic is redirected to the next closest region.
-- Ensure that the app tier is using a private IP address to access the DB and not able to access the public IP of your Azure SQL DB.
+- Ensure that the apps are using a private IP address to access the DB and not able to access the public IP of your Azure SQL DB.
 - DNS concepts should be understood and explained in the solution.
+- **BONUS** With the exception of Azure Firewall and the VPN Gateway, no other public IP addresses should be used. This also applies to the regional WAF.
 
 ## References
 
