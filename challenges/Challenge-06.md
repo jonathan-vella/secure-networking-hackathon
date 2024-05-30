@@ -26,6 +26,7 @@ The app architecture:
 - At this stage, CMS decided to use an Azure SQL database with SQL authentication in the S0 tier with locally redundant storage. The Database should not be publicly accessible and needs to be only accessible with a private IP using a DNS name.
 - In the future CMC want to enforce the use of encrytpion, private endpoints and DNS integration for Azure SQL. They want you to provide them with options and guidance how to achieve this.
 - Note that there is no need to populate the database since the DBAs will do that once you have secured the Azure SQL DB to the network
+- Minimize downtime while switching to App services
 
 ## Success Criteria
 
@@ -36,7 +37,9 @@ The app architecture:
 - Simulate a regional outage and verify that traffic is redirected to the next closest region.
 - DNS concepts should be understood and explained in the solution.
 - Azure Policy concepts should be understood and explained in the solution.
+- Minimize downtime while switching to App services
 - **BONUS** With the exception of Azure Firewall and the VPN Gateway, no other public IP addresses should be used. This also applies to the regional WAF.
+
 
 ## References
 
