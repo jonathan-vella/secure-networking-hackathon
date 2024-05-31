@@ -20,26 +20,23 @@ The app architecture:
 
 ![Modern application diagram](images/app_webapp.png)
 
-- The Web tier and the API tier need to be deployed as containerized Azure Web App. You can use the guidance located [here](../hacker-assets/sol_challenge06.md). to deploy both tiers in Azure App Service.
-- The web app can’t be directly exposed to the internet, and all users must be directed through a WAF before accessing the application.
-- Ensure that clients can’t bypass the firewall by using \*.azurewebsites.net
+- The Web tier and the API tier need to be deployed as containerized Azure Web Apps. You can use the guidance located [here](../hacker-assets/sol_challenge06.md) to deploy both tiers in Azure App Service.
+- Both tiers should not be directly exposed to the internet, and all users must be directed through a WAF before accessing the application. You need to also ensure that clients can’t bypass the firewall by using \*.azurewebsites.net
 - At this stage, CMS decided to use an Azure SQL database with SQL authentication in the S0 tier with locally redundant storage. The Database should not be publicly accessible and needs to be only accessible with a private IP using a DNS name.
-- In the future CMC want to enforce the use of encrytpion, private endpoints and DNS integration for Azure SQL. They want you to provide them with options and guidance how to achieve this.
-- Note that there is no need to populate the database since the DBAs will do that once you have secured the Azure SQL DB to the network
-- Minimize downtime while switching to App services
+- In the future CMC want to enforce the use of encryption, private endpoints and DNS integration for Azure SQL. They want you to provide them with options and guidance how to achieve this.
+- CMC has requested an estimate of the downtime during the transition to App services.
 
 ## Success Criteria
 
 - Present an updated environment diagram.
+- Present a high-level migration plan.
 - Refactor YADA to use App Service and ensure that API is using a private IP address to access the DB and that no one is able to access the DB using a Public IP.
 - Demonstrate how both App Service and Azure SQL can be configured with a 99.99% uptime SLA.
 - Verify that users in various regions are directed to the closest workload.
 - Simulate a regional outage and verify that traffic is redirected to the next closest region.
+- With the exception of Azure Firewall and the VPN Gateway, no other public IP addresses should be used. This also applies to the regional WAF.
 - DNS concepts should be understood and explained in the solution.
 - Azure Policy concepts should be understood and explained in the solution.
-- Minimize downtime while switching to App services
-- **BONUS** With the exception of Azure Firewall and the VPN Gateway, no other public IP addresses should be used. This also applies to the regional WAF.
-
 
 ## References
 
