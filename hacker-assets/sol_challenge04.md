@@ -46,7 +46,8 @@ az network application-gateway create \
     --priority 100 \
     --servers "10.30.1.10" \
     --waf-policy YadaWafPolicy \
-    --capacity 2 \
+    --capacity 3 \
+    --zones 1,2,3 \
     --no-wait
 
 ########--------------------------#######
