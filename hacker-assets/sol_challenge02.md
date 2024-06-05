@@ -77,7 +77,7 @@ EOF
 # Create API Virtual Machines
 echo "Create API Virtual Machines..."
 for i in `seq 1 2`; do
-az vm create -n vm-yada-api$i -g $rg -l $location --image "${publisher}:${offer}:${sku}:${version}" --generate-ssh-keys --size $vm_size \
+az vm create -n vm-yada-api-eus0$i -g $rg -l $location --image "${publisher}:${offer}:${sku}:${version}" --generate-ssh-keys --size $vm_size \
 --admin-username $adminuser --admin-password $pw \
 --vnet-name $spoke_vnet_name --subnet $api_subnet_name --nsg "" --public-ip-address "" \
 --zone=$i \
@@ -103,7 +103,7 @@ EOF
 # Create Web Virtual Machines
 echo "Create Web Virtual Machines..."
 for i in `seq 1 2`; do
-az vm create -n vm-yada-web$i -g $rg -l $location --image "${publisher}:${offer}:${sku}:${version}" --generate-ssh-keys --size $vm_size \
+az vm create -n vm-yada-web-eus0$i -g $rg -l $location --image "${publisher}:${offer}:${sku}:${version}" --generate-ssh-keys --size $vm_size \
 --admin-username $adminuser --admin-password $pw \
 --vnet-name $spoke_vnet_name --subnet $web_subnet_name --nsg "" --public-ip-address "" \
 --zone=$i \
@@ -147,6 +147,10 @@ ilb_api=10.30.2.10 # Update this with the private IP address of the Internal Loa
 api_image='erjosito/yadaapi:1.0'
 web_image='erjosito/yadaweb:1.0'
 
+# Credentials for IaaS-based workload
+adminuser='demouser'
+pw='demo!pass123' # Update this with a strong password
+
 ########--------------------------########
 
 # Deploy Virtual Network for YADA
@@ -179,7 +183,8 @@ EOF
 # Create API Virtual Machines
 echo "Create API Virtual Machines..."
 for i in `seq 1 2`; do
-az vm create -n vm-yada-api$i -g $rg -l $location --image "${publisher}:${offer}:${sku}:${version}" --generate-ssh-keys --size $vm_size \
+az vm create -n vm-yada-api-eus0$i -g $rg -l $location --image "${publisher}:${offer}:${sku}:${version}" --generate-ssh-keys --size $vm_size \
+--admin-username $adminuser --admin-password $pw \
 --vnet-name $spoke_vnet_name --subnet $api_subnet_name --nsg "" --public-ip-address "" \
 --zone=$i \
 --security-type Standard \
@@ -199,7 +204,8 @@ EOF
 # Create Web Virtual Machines
 echo "Create Web Virtual Machines..."
 for i in `seq 1 2`; do
-az vm create -n vm-yada-web$i -g $rg -l $location --image "${publisher}:${offer}:${sku}:${version}" --generate-ssh-keys --size $vm_size \
+az vm create -n vm-yada-web-eus0$i -g $rg -l $location --image "${publisher}:${offer}:${sku}:${version}" --generate-ssh-keys --size $vm_size \
+--admin-username $adminuser --admin-password $pw \
 --vnet-name $spoke_vnet_name --subnet $web_subnet_name --nsg "" --public-ip-address "" \
 --zone=$i \
 --security-type Standard \

@@ -22,7 +22,7 @@ The app architecture:
 
 - The Web tier and the API tier need to be deployed as containerized Azure Web Apps. You can use the guidance located [here](../hacker-assets/sol_challenge06.md) to deploy both tiers in Azure App Service.
 - Both tiers should not be directly exposed to the internet, and all users must be directed through a WAF before accessing the application. You need to also ensure that clients can’t bypass the firewall by using \*.azurewebsites.net
-- At this stage, CMS decided to use an Azure SQL database with SQL authentication in the S0 tier with locally redundant storage. The Database should not be publicly accessible and needs to be only accessible with a private IP using a DNS name.
+- At this stage, CMC decided to use an Azure SQL database with SQL authentication in the S0 tier with locally redundant storage. The Database should not be publicly accessible and needs to be only accessible with a private IP using a DNS name.
 - In the future CMC want to enforce the use of encryption, private endpoints and DNS integration for Azure SQL. They want you to provide them with options and guidance how to achieve this.
 - CMC has requested an estimate of the downtime during the transition to App services.
 

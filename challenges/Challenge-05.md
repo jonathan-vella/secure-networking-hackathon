@@ -16,17 +16,17 @@ CMC has the following requirements:
 
 - Network presence in a new Azure region: Sweden Central
 - The revised requirements for both instances now includes a WAF at a global level and mandatory SSL offloading. These are on top of the requirements described in the previous challenge.
-- On prem connectivity to database server
+- On-premises connectivity to the database server.
 - Optimize the traffic routing based on geo-location and performance
 - Ensure end-users can still access the application in the case of a regional outage
 - All users should be using a single URL regardless of what region they are accessing the application from
-- Incoming traffic (i.e., global to regional) should only be allowed to originate from CMC's global resources deployed in Azure.
+- Incoming traffic (i.e., global to regional) should only be allowed to originate from CMC's own global resources deployed in Azure.
 
-If time is a constraint, you can create a new VNET in Sweden Central and use VNET Peering to the VNET representing the on-premises network.
+Since this is still a proof-of-concept, and time is a constraint, you can create a new VNET in Sweden Central and use VNET Peering to the VNET representing the on-premises network.
 
 ## Success Criteria
 
-- Present to your coach CMCs global network design with an updated environment diagram.
+- Present to your coach CMC's global network design with an updated environment diagram.
 - Explain your design decisions based on the requirements above.
 - Present the single URL for the app.
 - Demonstrate how the solution would respond in the case of a regional outage from an end-user perspective and from the Azure administrator teams’ perspective that manage the workload.
