@@ -8,7 +8,7 @@ The objective of this challenge is to ensure you understand Azure Virtual Networ
 
 ## Challenge
 
-The Contoso Mortgage Company needs a virtual network solution in Azure that provides hybrid connectivity to the company’s headquarters and its various branch locations. This will extend their workloads to their customers all over the world. This virtual network solution should be centrally managed while being scalable based on regional demands.
+The Contoso Mortgage Company needs a network solution in Azure that provides hybrid connectivity to the company’s headquarters and its various branch locations. This will extend their workloads to their customers all over the world. This network solution should be centrally managed while being scalable based on regional demands.
 
 Currently CMC uses 10.0.0.0/16 for their on-premises network. The network admin team has allocated 10.1.0.0/16 address space for all Azure networking.
 
@@ -25,23 +25,21 @@ For testing the on-premises server (not the SQL Server!) can be accessed with th
 
 ## Requirements
 
-- CMC requires an Azure networking IP address plan presented to them.
-- Solution must be scalable, secure, and resilient. Solution must account for future workloads.
-- Solution must be aligned to the zero trust principles.
-- The primary Azure region CMC will use is North Europe.
-- Design cross-premises connectivity for YADA, including on-premises and from any resources deployed on the Azure Vnet.
-- Plan and document network design and connectivity solution.
-- Design must include central access to shared services.
-- Deploy a test VM in the Azure virtual network for validation of connectivity.
-- They are looking for a cost-effective solution.
-- Solution components should take advantage of cloud resiliency to individually meet SLA requirement of 99.99% as far as possible
-- Secure remote access to servers must be provided to the consultants for them to continue their work. A single hardened access point is required. No public IP should be attached to management VMs.
+- CMC requires an Azure networking IP address plan presented to them. Where applicable, IP addresses should be contiguous.
+- The solution must be scalable, secure, and resilient and be aligned to the zero trust principles.
+- The primary Azure region CMC will use is East US.
+- You need to design connectivity for YADA, including from on-premises and from any resources in Azure.
+- You need to plan and document network design and connectivity solution.
+- The design must include central access to shared services.
+- You must deploy a test VM in Azure to validate connectivity between on-premises and Azure.
+- The solution must be cost-effective solution and should take advantage of cloud resiliency to individually meet the SLA requirement of 99.99% as far as possible.
+- Secure remote access to servers must be provided to the consultants for them to continue their work. A single hardened access point is required.
 
 ## Success Criteria
 
 To successfully complete this challenge as a team you must:
 
-- Present to your coach your virtual network design. This must include at a network topology diagram and an IP address plan.
+- Present to your coach your network design. This must include at a network topology diagram and an IP address plan.
 - Present the virtual network deployment in your subscription (only deploy after you've agreed with both your coach and team your network design).
 - Present the cross-premises connection in your subscription.
 - Validate your hybrid connection to the on-premises network from Azure

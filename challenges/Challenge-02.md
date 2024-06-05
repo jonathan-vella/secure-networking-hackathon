@@ -8,9 +8,9 @@ The objective of this challenge is to ensure you understand how to design a netw
 
 ## Challenge
 
-The first app being deployed consists of 2 tiers that will be hosted in Azure (web and application) and a data tier that will remain on-premises. Although this pattern is not a public cloud best practice, CMC’s legal team has strongly recommended this approach in spite of the potential latency problems between the application and database tiers, for data residency reasons.
+The first application being deployed consists of 2 tiers that will be hosted in Azure (web and application) and a data tier which will remain on-premises. Although this pattern is not a public cloud best practice, CMC’s legal team has strongly recommended this approach in spite of the potential latency problems between the application and data tier, for data residency reasons.
 
-The front end is a public facing web server, middle tier is a REST API. The application team has provided the template that will deploy the web server and application. Your team needs to ensure the Azure virtual network is designed to support the high availability of this new 2-tiered application. Application should be resilient to the outage of any Azure VM. The on-premises database does not need to be considered in your resilient network design.
+The front end is a public facing web server,and the middle tier is a REST API. The application team has provided you with scripts which will help you deploy the web and API servers. Your team needs to ensure the Azure virtual network is designed to support the high availability of this new 2-tiered application. The application should be resilient to the outage of any Azure datacenter. The on-premises database does not need to be considered in your resilient network design.
 
 CMC has gone viral and has experienced unprecedented growth and the networking team has identified sporadic timeouts in outbound connections. In this challenge, you will also need to increase scalability of outbound connections to prevent application timeouts.
 
@@ -26,8 +26,7 @@ CMC has the following requirements:
 
 - The application requires a load balancing solution that can direct requests to the available endpoints to ensure application availability.
 - The application needs to be able to communicate to the database resources on premises (the username is `demouser`, the password is `demo!pass123`).
-- The application should be resilient to single VM failures.
-- The solution should be a cost-effective solution leveraging cloud native tools
+- The application should be resilient to an Azure DC failure and be cost-effective leveraging cloud native tools.
 - The solution must enable the middle tier to communicate to external internet endpoints without attaching a public IP to any VM.
 - The solution components should take advantage of cloud resiliency to individually meet an SLA requirement of 99.99% when possible
 - The scripts created by the Azure consultants will download container images from an online image repository, but they could not tell you more details about that.
