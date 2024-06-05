@@ -16,7 +16,14 @@ location=your-location
 spoke_vnet_name=vnet-spoke-eus001
 waf_subnet_name=WafSubnet
 
+# Set Variables for Application Gateway
+name=waf-yada-eus01
+pip=pip-waf-yada-eus01
+
 ########--------------------------########
+
+# Create Public IP for WAF
+az network public-ip create -g $rg -n $pip --sku standard -l $location
 
 # Create WAF Policy
 az network application-gateway waf-policy create \
@@ -24,12 +31,13 @@ az network application-gateway waf-policy create \
 
 # Deploy Azure Application Gateway with WAF v2
 az network application-gateway create \
-    --name appgw-yada-eus01 \
+    --name $name \
     --resource-group $rg \
     --location $location \
     --vnet-name $spoke_vnet_name \
     --subnet $waf_subnet_name \
     --sku WAF_v2 \
+    --public-ip-address $pip \
     --http-settings-cookie-based-affinity Disabled \
     --frontend-port 80 \
     --http-settings-port 80 \
