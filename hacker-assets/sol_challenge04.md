@@ -16,6 +16,8 @@ location=your-location
 spoke_vnet_name=vnet-spoke-eus001
 waf_subnet_name=WafSubnet
 
+########--------------------------########
+
 # Deploy Azure Application Gateway with WAF v2
 az network application-gateway create \
     --name appgateway \

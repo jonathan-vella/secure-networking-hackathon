@@ -19,7 +19,7 @@ CMC has the following requirements:
 - On-premises connectivity to the database server.
 - Optimize the traffic routing based on geo-location and performance
 - Ensure end-users can still access the application in the case of a regional outage
-- All users should be using a single URL regardless of what region they are accessing the application from
+- All users should be using a single URL regardless of what region they are accessing the application from. Note: Your coach will share with you the public DNS name and SSL certificate.
 - Incoming traffic (i.e., global to regional) should only be allowed to originate from CMC's own global resources deployed in Azure.
 
 Since this is still a proof-of-concept, and time is a constraint, you can create a new VNET in Sweden Central and use VNET Peering to the VNET representing the on-premises network.
