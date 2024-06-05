@@ -19,6 +19,8 @@ web_subnet_name=WebSubnet
 web_subnet_prefix=10.30.1.0/24
 api_subnet_name=ApiSubnet
 api_subnet_prefix=10.30.2.0/24
+waf_subnet_name=WafSubnet
+waf_subnet_prefix=10.30.3.0/24
 
 # Variables for SQL Server
 sql_server_fqdn=server-ip-address # use either IP address or FQDN
@@ -41,6 +43,9 @@ adminuser='demouser'
 pw='demo!pass123' # Update this with a strong password
 
 ########--------------------------########
+
+# Create resource group
+#az group create -n $rg -l $location -o none
 
 # Deploy Virtual Network for YADA
 

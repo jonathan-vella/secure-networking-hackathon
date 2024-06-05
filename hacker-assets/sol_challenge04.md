@@ -18,9 +18,13 @@ waf_subnet_name=WafSubnet
 
 ########--------------------------########
 
+# Create WAF Policy
+az network application-gateway waf-policy create \
+    --name YadaWafPolicy --resource-group $rg --location $location
+
 # Deploy Azure Application Gateway with WAF v2
 az network application-gateway create \
-    --name appgateway \
+    --name appgw-yada-eus01 \
     --resource-group $rg \
     --location $location \
     --vnet-name $spoke_vnet_name \
@@ -31,7 +35,10 @@ az network application-gateway create \
     --http-settings-port 80 \
     --http-settings-protocol Http \
     --routing-rule-type Basic \
+    --priority 100 \
     --servers "10.30.1.10" \
-    --capacity 2
+    --waf-policy YadaWafPolicy \
+    --capacity 2 \
+    --no-wait
 
 ########--------------------------#######
