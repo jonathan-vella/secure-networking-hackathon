@@ -10,7 +10,6 @@ You can use these commands to deploy Azure Front Door in an existing resource gr
 
 # Variables for Azure environment
 rg=rg-yada-eus01
-location=eastus
 
 # Variables for Azure Front Door
 profilename=afdyadas
