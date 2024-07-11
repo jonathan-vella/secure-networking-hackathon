@@ -35,16 +35,16 @@ If using PowerShell:
 3.  Deploy the script
 
  ```Powershell
-$RGname = 'cmc-on-prem'
-$location = 'eastus'
-$templateuri = 'https://raw.githubusercontent.com/jonathan-vella/secure-networking-hackathon/main/setup/OnPrem/onpremdeploy.json'
+    $RGname = 'cmc-on-prem'
+    $location = 'eastus'
+    $templateuri = 'https://raw.githubusercontent.com/jonathan-vella/secure-networking-hackathon/main/setup/OnPrem/onpremdeploy.json'
+    
+    New-AzResourceGroup -Name $RGname -Location $location
+    
+    New-AzResourceGroupDeployment -ResourceGroupName $RGname -TemplateFile $templateuri
+    ```
 
-New-AzResourceGroup -Name $RGname -Location $location
-
-New-AzResourceGroupDeployment -ResourceGroupName $RGname -TemplateFile $templateuri
-```
-
-    If using CLI
+If using CLI
 
 1.  Sign in to Azure:
 
