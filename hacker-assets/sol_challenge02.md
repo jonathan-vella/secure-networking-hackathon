@@ -1,7 +1,7 @@
 # Secure Networking Artifacts
 ## Challenge 02 - Deploying YADA
 
-You can use these commands to deploy the YADA app to an existing resource group (note that you need to update some of the variables):
+You can use these commands to deploy the YADA app to an existing resource group (note that you need to update some of the variables and credentials):
 
 ```bash
 ######## Deploy YADA ########
