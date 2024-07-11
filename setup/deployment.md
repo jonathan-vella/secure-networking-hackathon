@@ -41,7 +41,7 @@ If using PowerShell:
     
     New-AzResourceGroup -Name $RGname -Location $location
     
-    New-AzResourceGroupDeployment -ResourceGroupName $RGname -TemplateFile $templateuri
+    New-AzResourceGroupDeployment -ResourceGroupName $RGname -TemplateURI $templateuri
     ```
 
 If using CLI
