@@ -34,7 +34,7 @@ If using PowerShell:
     
 3.  Deploy the script
 
- ```Powershell
+    ```Powershell
     $RGname = 'cmc-on-prem'
     $location = 'eastus'
     $templateuri = 'https://raw.githubusercontent.com/jonathan-vella/secure-networking-hackathon/main/setup/OnPrem/onpremdeploy.json'
@@ -48,26 +48,26 @@ If using CLI
 
 1.  Sign in to Azure:
 
-```sh
-az login
-```
+    ```sh
+    az login
+    ```
 
 2.  Set Azure subscription:
 
-```sh
-az account set --subscription "your-subscription-name"
-```
+    ```sh
+    az account set --subscription "your-subscription-name"
+    ```
 
 3. Deploy the script
 
-```sh
- $RGname = 'cmc-on-prem'
- $location = 'eastus'
- $templateuri = 'https://raw.githubusercontent.com/jonathan-vella/secure-networking-hackathon/main/setup/OnPrem/onpremdeploy.json'
+    ```sh
+    $RGname = 'cmc-on-prem'
+    $location = 'eastus'
+    $templateuri = 'https://raw.githubusercontent.com/jonathan-vella/secure-networking-hackathon/main/setup/OnPrem/onpremdeploy.json'
 
-az group create --name $RGname --location $location
-az deployment group create --resource-group $RGname --template-uri $templateuri
-```
+    az group create --name $RGname --location $location
+    az deployment group create --resource-group $RGname --template-uri $templateuri
+    ```
 
 ## Provisioned Resources
 
