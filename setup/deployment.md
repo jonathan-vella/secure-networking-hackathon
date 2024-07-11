@@ -34,15 +34,15 @@ If using PowerShell:
     
 3.  Deploy the script
 
-        ```Powershell
-        $RGname = 'cmc-on-prem'
-        $location = 'eastus'
-        $templateuri = 'https://raw.githubusercontent.com/jonathan-vella/secure-networking-hackathon/main/setup/OnPrem/onpremdeploy.json'
+ ```Powershell
+$RGname = 'cmc-on-prem'
+$location = 'eastus'
+$templateuri = 'https://raw.githubusercontent.com/jonathan-vella/secure-networking-hackathon/main/setup/OnPrem/onpremdeploy.json'
 
-        New-AzResourceGroup -Name $RGname -Location $location
+New-AzResourceGroup -Name $RGname -Location $location
 
-        New-AzResourceGroupDeployment -ResourceGroupName $RGname -TemplateFile $templateuri
-        ```
+New-AzResourceGroupDeployment -ResourceGroupName $RGname -TemplateFile $templateuri
+```
 
     If using CLI
 
