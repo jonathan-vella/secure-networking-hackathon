@@ -13,7 +13,7 @@ rg=your-resource-group-name
 location=your-location
 
 # Set Variables for Spoke Network
-spoke_vnet_name=vnet-spoke-eus001
+spoke_vnet_name=vnet-spoke-eus01
 spoke_vnet_prefix=10.30.0.0/21
 web_subnet_name=WebSubnet
 web_subnet_prefix=10.30.1.0/24
@@ -25,8 +25,8 @@ waf_subnet_prefix=10.30.3.0/24
 # Variables for SQL Server
 sql_server_fqdn=server-ip-address # use either IP address or FQDN
 sql_db_name=mydb
-sql_username=azure
-sql_password=WhoNeedsPasswords
+sql_username=demouser
+sql_password=demo!pass123
 
 # Variables for IaaS-based workload
 offer="0001-com-ubuntu-server-focal"
@@ -39,7 +39,7 @@ api_image='erjosito/yadaapi:1.0'
 web_image='erjosito/yadaweb:1.0'
 
 # Credentials for IaaS-based workload
-adminuser='demouser'
+adminuser=azureuser
 pw='demo!pass123' # Update this with a strong password
 
 ########--------------------------########
