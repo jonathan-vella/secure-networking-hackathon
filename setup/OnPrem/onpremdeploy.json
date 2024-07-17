@@ -196,7 +196,7 @@
         ],
         "publicIpAddressName": "[format('{0}-publicip-{1}', parameters('virtualMachineName'), uniqueString(parameters('virtualMachineName')))]",
         "publicIpAddressType": "Dynamic",
-        "publicIpAddressSku": "Basic",
+        "publicIpAddressSku": "Standard",
         "diskConfigurationType": "NEW",
         "nsgId": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroupName'))]",
         "dataDisksLuns": "[array(range(0, parameters('sqlDataDisksCount')))]",
@@ -261,8 +261,7 @@
             "dependsOn": [
             ],
             "properties": {
-                "publicIPAllocationMethod": "Dynamic",
-                "PublicIPAddressSku": "Standard"
+                "publicIPAllocationMethod": "Dynamic"
             }
         },
         {
@@ -285,7 +284,9 @@
                                 "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('mocOnpremNetwork').name, parameters('mocOnpremGateway').subnetName)]"
                             },
                             "publicIPAddress": {
-                                "id": "[resourceId('Microsoft.Network/publicIPAddresses', parameters('mocOnpremGateway').publicIPAddressName)]"
+                                "id": "[resourceId('Microsoft.Network/publicIPAddresses', parameters('mocOnpremGateway').publicIPAddressName)]",
+                                "publicIPAllocationMethod": "Dynamic",
+                                "PublicIPAddressSku": "Standard"
                             }
                         },
                         "name": "vnetGatewayConfig"
