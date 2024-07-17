@@ -52,7 +52,7 @@
         },
         "location": {
             "type": "string",
-            "defaultValue": "eastus"
+            "defaultValue": "eastus2"
         },
         "localNetworkGateway": {
             "type": "string",

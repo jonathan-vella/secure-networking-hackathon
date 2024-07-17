@@ -36,7 +36,7 @@ If using PowerShell:
 
     ```Powershell
     $RGname = 'cmc-on-prem'
-    $location = 'eastus'
+    $location = 'eastus2'
     $templateuri = 'https://raw.githubusercontent.com/jonathan-vella/secure-networking-hackathon/main/setup/OnPrem/onpremdeploy.json'
     
     New-AzResourceGroup -Name $RGname -Location $location
@@ -62,7 +62,7 @@ If using CLI
 
     ```sh
     $RGname = 'cmc-on-prem'
-    $location = 'eastus'
+    $location = 'eastus2'
     $templateuri = 'https://raw.githubusercontent.com/jonathan-vella/secure-networking-hackathon/main/setup/OnPrem/onpremdeploy.json'
 
     az group create --name $RGname --location $location

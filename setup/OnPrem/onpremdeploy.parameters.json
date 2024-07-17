@@ -42,7 +42,7 @@
             "value": true
         },
         "location": {
-            "value": "eastus"
+            "value": "eastus2"
         },
         "localNetworkGateway": {
             "value": "local-gateway-cmc-onprem"
