@@ -15,7 +15,12 @@ For deploying the hackathon environment you will need the following:
 
 ## Deployment
 
-> Note: This script will often take 30-45 minutes on average to execute.
+> Note: This script will often take 30-45 minutes on average to execute. It assumes that you have already installed the Azure CLI and are logged in to your Azure account. If you are using Azure Cloud Shell, you can skip the login step. If you have not installed the Azure CLI, you can find the instructions here: https://docs.microsoft.com/en-us/cli/azure/install-azure-cli
+    # This script will deploy a network topology in Azure which simulate an on-premises DC. It will create the following resources:
+    # 1. On-Premises Network
+    # 2. Management VM
+    # 3. Azure SQL Server with a Private Endpoint
+    # 4. On-Premises VPN Gateway
 
 Using Azure CLI
 
@@ -34,17 +39,7 @@ Using Azure CLI
 3. Execute the script
 
     ```sh
-    # This script will deploy a network topology in Azure which simulate an on-premises DC. It will create the following resources:
-    # 1. On-Premises Network
-    # 2. Management VM
-    # 3. Azure SQL Server with a Private Endpoint
-    # 4. On-Premises VPN Gateway
-
-    # Note. This script assumes that you have already installed the Azure CLI and are logged in to your Azure account.
-    # If you have not installed the Azure CLI, you can find the instructions here: https://docs.microsoft.com/en-us/cli/azure/install-azure-cli
-
-    # Set variables for Azure environment
-    # Note. You can change the values of these variables to suit your environment.
+    # Set variables for Azure environment. You can change the values of these variables to suit your environment.
 
     # Define the Azure location where you want to deploy the resources
 
