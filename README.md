@@ -28,4 +28,4 @@ We do not provide guides or instructions to solve the challenges, just a few hin
 
 ## Azure subscription requirements
 
-TBD
+Refer to this page for [Azure subscription requirements](./setup/README.md)
