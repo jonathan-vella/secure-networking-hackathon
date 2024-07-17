@@ -286,8 +286,8 @@
                             "publicIPAddress": {
                                 "id": "[resourceId('Microsoft.Network/publicIPAddresses', parameters('mocOnpremGateway').publicIPAddressName)]",
                                 "publicIPAllocationMethod": "Static",
-                                "PublicIPAddressSku": "Standard"
-                            }
+                                "sku": "Standard"
+                                }
                         },
                         "name": "vnetGatewayConfig"
                     }
