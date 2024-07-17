@@ -261,7 +261,7 @@
             "dependsOn": [
             ],
             "properties": {
-                "publicIPAllocationMethod": "Dynamic"
+                "publicIPAllocationMethod": "Static"
             }
         },
         {
