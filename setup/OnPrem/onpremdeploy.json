@@ -196,7 +196,7 @@
         ],
         "publicIpAddressName": "[format('{0}-publicip-{1}', parameters('virtualMachineName'), uniqueString(parameters('virtualMachineName')))]",
         "publicIpAddressType": "Dynamic",
-        "publicIpAddressSku": "Basic",
+        "publicIpAddressSku": "Standard",
         "diskConfigurationType": "NEW",
         "nsgId": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroupName'))]",
         "dataDisksLuns": "[array(range(0, parameters('sqlDataDisksCount')))]",
