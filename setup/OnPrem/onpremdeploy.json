@@ -261,7 +261,8 @@
             "dependsOn": [
             ],
             "properties": {
-                "publicIPAllocationMethod": "Static"
+                "publicIPAllocationMethod": "Static",
+                "publicIpAddressSku": "Standard"
             }
         },
         {
@@ -388,7 +389,7 @@
                 "[resourceId('Microsoft.Network/virtualNetworks', parameters('mocOnpremNetwork').name)]"
             ],
             "sku": {
-                "name": "[variables('publicIpAddressSku')]"
+                "name": "Standard"
             },
             "properties": {
                 "publicIPAllocationMethod": "[variables('publicIpAddressType')]"
