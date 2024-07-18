@@ -12,8 +12,9 @@ If you don't have a database, you can deploy one using SQL Server:
 suffix=$(head /dev/urandom | tr -dc a-z0-9 | head -c 5 ; echo '')
 
 # Define Variables
-rg=rg-yada-eus01$suffix
+rg=rg-spoke-eus01
 location="eastus"
+sql_location="eastus2"
 sql_server_name=sqlsrv$suffix
 sql_db_name=mydb
 sql_username=azure
@@ -27,7 +28,7 @@ az group create -n $rg -l $location -o none
 
 # Create Azure SQL Server and database
 echo "Creating Azure SQL..."
-az sql server create -n $sql_server_name -g $rg -l $location --admin-user "$sql_username" --admin-password "$sql_password" -o none
+az sql server create -n $sql_server_name -g $rg -l $sql_location --admin-user "$sql_username" --admin-password "$sql_password" -o none
 az sql db create -n $sql_db_name -s $sql_server_name -g $rg -e Basic -c 5 --no-wait -o none
 sql_server_fqdn=$(az sql server show -n $sql_server_name -g $rg -o tsv --query fullyQualifiedDomainName) && echo $sql_server_fqdn
 ```
@@ -38,8 +39,8 @@ This example Azure CLI code deploys the API image on Azure Application Services 
 
 ```bash
 # Run API on Web App
-svcplan_name=yada-appsvcplan-eus01
-svcplan_sku=B1
+svcplan_name=yada-appsvcplan-eus02
+svcplan_sku=P0v3
 app_name_api=yada-api-$suffix
 echo "Creating webapp for API..."
 az appservice plan create -n $svcplan_name -g $rg --sku $svcplan_sku --is-linux -o none
@@ -55,7 +56,7 @@ You can either use the `api/ip` endpoint of the application to find out the API'
 
 ```bash
 # Update Azure SQL Server IP firewall with ACI container IP
-api_egress_ip=$(curl -s "https://${app_url_api}/api/ip" | jq -r .my_public_ip)
+api_egress_ip=$(curl -s "https://${app_url_api}/api/ip" | jq -r .my_public_ip) && echo $api_egress_ip
 az sql server firewall-rule create -g "$rg" -s "$sql_server_name" -n public_api_aci-source --start-ip-address "$api_egress_ip" --end-ip-address "$api_egress_ip"
 ```
 

@@ -14,20 +14,20 @@ Currently CMC uses 10.0.0.0/16 for their on-premises network. The network admin 
 
 The following on-premises resources can be used to connect to Azure:
 
-- VPN-gateway-cmc-onprem with Public IP “pip-onprem-vpn-gateway” attached.
+- VPN Gateway "vpn-on-prem" with Public IP “pip-onprem-vpn-gateway” attached.
 
 ![CMC on-premises network diagram](images/on-premises.png)
 
 For testing the on-premises server (not the SQL Server!) can be accessed with the following username and password:
 
-    - HackerAdmin
+    - demouser
     - demo!pass123
 
 ## Requirements
 
 - CMC requires an Azure networking IP address plan presented to them. Where applicable, IP addresses should be contiguous.
 - The solution must be scalable, secure, and resilient and be aligned to the zero trust principles.
-- The primary Azure region CMC will use is East US.
+- The primary Azure region CMC will use is East US2.
 - You need to design connectivity for YADA, including from on-premises and from any resources in Azure.
 - You need to plan and document network design and connectivity solution.
 - The design must include central access to shared services.
