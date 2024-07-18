@@ -20,11 +20,11 @@ az group create -n $rg -l $location
 ######## Deploy Spoke Network aka Workload Network ########
 # Set Variables for Spoke Network
 spoke_vnet_name=vnet-yada-eus01
-spoke_vnet_prefix=10.1.10.0/21
+spoke_vnet_prefix=10.1.16.0/21
 web_subnet_name=WebSubnet
-web_subnet_prefix=10.1.10.0/26
+web_subnet_prefix=10.1.16.0/26
 api_subnet_name=ApiSubnet
-api_subnet_prefix=10.1.10.64/26
+api_subnet_prefix=10.1.16.64/26
 
 # Create Network Security Groups for Spoke subnets
 az network nsg create -n web-nsg -g $rg -l $location
@@ -68,7 +68,6 @@ web_image='erjosito/yadaweb:1.0'
 # Credentials for IaaS-based workload
 adminuser='demouser'
 pw='demo!pass123'
-# Update this with a strong password
 
 ########--------------------------########
 
