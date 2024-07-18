@@ -43,7 +43,6 @@ Using Azure CLI
     # Set variables for Azure environment. You can change the values of these variables to suit your environment.
 
     # Define the Azure location where you want to deploy the resources
-
     location=eastus2
 
     # Define the name of the resource groups
@@ -73,8 +72,8 @@ Using Azure CLI
     az network vnet subnet create -g $rg -n $mgmt_subnet_name --vnet-name $vnet_name --address-prefix $mgmt_subnet_prefix --network-security-group mgmt-nsg
     az network vnet subnet create -g $rg -n $sql_subnet_name --vnet-name $vnet_name --address-prefix $sql_subnet_prefix --network-security-group sql-nsg
 
-    ######## Update NSG Rules for Spoke Network ########
-    # Update NSG Rules for Spoke Network (These are just sample starter rules. You will need to update them to allow and deny your specific traffic.)
+    ######## Update NSG Rules for VM Subnets ########
+    # Update NSG Rules for VM Subnets
     echo "Updating NSGs Rules..."
     az network nsg rule create -n AdminIn --nsg-name "mgmt-nsg" -g $rg --priority 1000 --destination-port-ranges 22 3389 --access Allow --protocol Tcp -o none
     az network nsg rule create -n AdminIn --nsg-name "sql-nsg" -g $rg --priority 1000 --destination-port-ranges 22 3389 --access Allow --protocol Tcp -o none
@@ -146,7 +145,7 @@ Using Azure CLI
 
     ######## Deploy on-premises VPN Gateway ########
 
-    # Create VPN Gateway (you might want to take a break - est. provisioning time is 30-40mins)
+    # Create VPN Gateway - you might want to take a break after this part - est. provisioning time is 30-40mins.
     # Set variables for VPN Gateway
     gw_name=vpn-on-prem
     gw_pip_name=pip-vpn-on-prem
@@ -160,7 +159,7 @@ Using Azure CLI
 
     # Note. The --no-wait parameter allows the gateway to be created in the background.
     # It does not mean that the VPN gateway is created immediately. A VPN gateway can take 45 minutes or more to create. 
-    # You can't modify the Vnet whilst the gateway is being created.
+    # You cannot modify the Vnet whilst the gateway is being created.
     # You can check the status of the gateway with the following command: az network vnet-gateway list -g $rg -o table
 ```
 
