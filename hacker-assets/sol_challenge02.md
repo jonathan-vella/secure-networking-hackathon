@@ -1,8 +1,9 @@
 # Secure Networking Artifacts
 ## Challenge 02 - Deploying YADA
 
-You can use these commands to deploy the YADA app to an existing resource group (note that you need to update some of the variables and credentials):
+You can use these commands to deploy the YADA app to an existing resource group (note that you will need to update some of the variables):
 
+```bash
 # Set variables for Azure environment
 # Note. You can change the values of these variables to suit your environment.
 # Define the Azure location where you want to deploy the resources
@@ -130,5 +131,7 @@ az vm create -n vm-yada-web-eus0$i -g $rg -l $location --image "${publisher}:${o
 --zone=$i \
 --custom-data $web_cloudinit_file -o none
 done
+```
+
 
 
