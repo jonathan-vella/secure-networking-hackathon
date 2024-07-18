@@ -1,4 +1,5 @@
-# YADA - Deployment on Azure App Services
+# Secure Networking Artifacts
+## Challenge 06 - YADA Deployment on Azure App Services
 
 In the [YADA GitHub repo](https://github.com/microsoft/YADA) you can find additional information about YADA web and API components. In the following example you can find the simplest deployment of the YADA app using Azure Web Apps for the web and API tiers, and Azure SQL Database for the data tier.
 
@@ -12,8 +13,8 @@ If you don't have a database, you can deploy one using SQL Server:
 suffix=$(head /dev/urandom | tr -dc a-z0-9 | head -c 5 ; echo '')
 
 # Define Variables
-rg=rg-spoke-eus01
-location="eastus"
+rg=rg-yada-eus02
+location="eastus2"
 sql_location="eastus2"
 sql_server_name=sqlsrv$suffix
 sql_db_name=mydb
@@ -39,7 +40,7 @@ This example Azure CLI code deploys the API image on Azure Application Services 
 
 ```bash
 # Run API on Web App
-svcplan_name=yada-appsvcplan-eus02
+svcplan_name=yada-appsvcplan-eus01
 svcplan_sku=P0v3
 app_name_api=yada-api-$suffix
 echo "Creating webapp for API..."
