@@ -89,7 +89,6 @@ Using Azure CLI
     # Credentials for IaaS-based workload
     adminuser='demouser'
     pw='demo!pass123'
-    # Update this with a strong password
 
     # Create Mgmt Virtual Machine
     echo "Create Mgmt Virtual Machine..."
