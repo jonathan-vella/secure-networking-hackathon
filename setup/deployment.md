@@ -164,7 +164,9 @@ Using Azure CLI
 
 ## Provisioned Resources
 
-The following are resources deployed as part of the deployment script (per team). This is a subset of the resources required during the hackathon. Attendees will be deploying additional resources during the hackathon such as Azure Front Door, Azure Firewall, Azure VPN Gateway, Azure Application Gateway, Azure Virtual Machines, Azure SQL, Azure App Services, Azure Bastion, etc.
+The following are resources deployed as part of the deployment script (per team). This is a subset of the resources required during the hackathon.
+
+Attendees will be deploying additional resources during the hackathon such as Azure Front Door, Azure Firewall, Azure VPN Gateway, Azure Application Gateway, Azure Virtual Machines, Azure SQL, Azure App Services, Azure Bastion, etc.
 
 | Azure resource                | Pricing tier/SKU | Purpose                                          |
 | ----------------------------- | ---------------- | ------------------------------------------------ |
