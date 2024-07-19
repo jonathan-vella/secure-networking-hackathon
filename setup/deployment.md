@@ -160,9 +160,9 @@ Using Azure CLI
     # It does not mean that the VPN gateway is created immediately. A VPN gateway can take 45 minutes or more to create. 
     # You cannot modify the Vnet whilst the gateway is being created.
     # You can check the status of the gateway with the following command: az network vnet-gateway list -g $rg -o table
-```
-
-## Provisioned Resources
+    ```
+    
+### Provisioned Resources
 
 The following are resources deployed as part of the deployment script (per team). This is a subset of the resources required during the hackathon.
 
