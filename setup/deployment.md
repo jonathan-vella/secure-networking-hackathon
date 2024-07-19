@@ -164,16 +164,13 @@ Using Azure CLI
 
 ## Provisioned Resources
 
-The following are resources are deployed as part of the deployment script (per team). This is a subset of the resources required during the hackathon. Attendees will be deploying additional resources during the hackathon such as Azure Front Door, Azure Firewall, Azure VPN Gateway, Azure Application Gateway, Azure Virtual Machines, Azure SQL, etc.
+The following are resources deployed as part of the deployment script (per team). This is a subset of the resources required during the hackathon. Attendees will be deploying additional resources during the hackathon such as Azure Front Door, Azure Firewall, Azure VPN Gateway, Azure Application Gateway, Azure Virtual Machines, Azure SQL, Azure App Services, Azure Bastion, etc.
 
 | Azure resource                | Pricing tier/SKU | Purpose                                          |
 | ----------------------------- | ---------------- | ------------------------------------------------ |
 | Azure Virtual Network         | n/a              | Network space for on premises                    |
-| Azure Bastion                 | Basic            | Securely connect to Azure VMs                    |
-| Azure Local network gateway   | n/a              | Represents CMC's Azure network address space     |
-| Azure Network Security Group  | n/a              | Bastion subnet, data subnet, and mgmt subnet NSG |
-| Azure Public IP               | Standard         | Bastion Public IP                                |
-| Azure Public IP               | Basic            | on-prem VPN gateway public IP                    |
-| Azure Virtual Machine         | Standard D2S v3  | SQL VM                                           |
+| Azure Network Security Group  | n/a              | SQL subnet, and mgmt subnet NSG                  |
+| Azure Public IP               | Standard         | On-premises VPN gateway public IP                |
+| Azure SQL                     | S0               | Azure SQL Server & Database                      |
 | Azure Virtual Machine         | Standard D2S v3  | Windows VM                                       |
-| Azure Virtual Network Gateway | Basic            | On-prem Gateway                                  |
+| Azure Virtual Network Gateway | VPNGW1           | On-premises Gateway                              |
