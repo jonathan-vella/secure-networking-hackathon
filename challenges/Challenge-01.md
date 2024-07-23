@@ -54,6 +54,7 @@ To successfully complete this challenge as a team you must:
 - [Networking architectures](https://learn.microsoft.com/azure/architecture/guide/networking/networking-start-here#networking-architectures)
 - [Plan Azure Virtual Networks](https://learn.microsoft.com/azure/virtual-network/virtual-network-vnet-plan-design-arm)
 - [IP Address Planning](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/plan-for-ip-addressing)
+- [IP Address Planning template](https://github.com/jonathan-vella/architecting-for-success/blob/main/102-Azure-Landing-Zones/docs/Azure%20Network%20Documentation%20Template.xlsx)
 - [Hub-and-spoke network topology in Azure](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/hub-spoke)
 - [Hub-and-spoke network topology with Azure Virtual WAN](https://learn.microsoft.com/en-us/azure/architecture/networking/hub-spoke-vwan-architecture)
 - [Create site-to-site connections using Virtual WAN](https://learn.microsoft.com/en-us/azure/virtual-wan/virtual-wan-site-to-site-portal)
