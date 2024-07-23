@@ -20,7 +20,7 @@ az group create -n $rg -l $location
 ######## Deploy Spoke Network aka Workload Network ########
 # Set Variables for Spoke Network
 spoke_vnet_name=vnet-yada-eus01
-spoke_vnet_prefix=10.1.16.0/21
+spoke_vnet_prefix=10.1.16.0/22
 web_subnet_name=WebSubnet
 web_subnet_prefix=10.1.16.0/26
 api_subnet_name=ApiSubnet
@@ -50,7 +50,8 @@ az network vnet subnet update -n $api_subnet_name --vnet-name $spoke_vnet_name -
 ########--------------------------########
 
 # Variables for SQL Server
-sql_server_fqdn=10.0.3.4 # use either IP address or FQDN
+# You can use either IP address or FQDN
+sql_server_fqdn=10.0.2.4
 sql_db_name=mydb
 sql_username=sqladmin
 sql_password='demo!pass123'
