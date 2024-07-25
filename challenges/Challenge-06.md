@@ -35,7 +35,7 @@ The app architecture:
 - Demonstrate how both App Service and Azure SQL can be configured with a 99.99% uptime SLA.
 - Verify that users in various regions are directed to the closest workload.
 - Simulate a regional outage and verify that traffic is redirected to the next closest region.
-- With the exception of Azure Firewall and the VPN Gateway, no other public IP addresses should be used. This also applies to the regional WAF.
+- With the exception of Azure Firewall, Application Gateway, and the VPN Gateway, no other public IP addresses should be used.
 - DNS concepts should be understood and explained in the solution.
 - Azure Policy concepts should be understood and explained in the solution.
 
