@@ -13,7 +13,7 @@ If you don't have a database, you can deploy one using SQL Server:
 suffix=$(head /dev/urandom | tr -dc a-z0-9 | head -c 5 ; echo '')
 
 # Define Variables
-rg=rg-yada-eus02
+rg=rg-yada-appsvc-eus02
 location="eastus2"
 sql_location="eastus2"
 sql_server_name=sqlsrv$suffix
