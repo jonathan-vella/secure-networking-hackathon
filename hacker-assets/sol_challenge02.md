@@ -7,10 +7,9 @@ You can use these commands to deploy the YADA app to an existing resource group 
 # Set variables for Azure environment
 # Note. You can change the values of these variables to suit your environment.
 # Define the Azure location where you want to deploy the resources
-location=eastus2
-
+location=swedencentral
 # Define the name of the resource groups
-rg=rg-yada-eus01
+rg=rg-yada-swc01
 
 # Note. This script assumes that you have not already created a resource group in Azure.
 # You can use the following command to create one:
@@ -19,7 +18,7 @@ az group create -n $rg -l $location
 
 ######## Deploy Spoke Network aka Workload Network ########
 # Set Variables for Spoke Network
-spoke_vnet_name=vnet-yada-eus01
+spoke_vnet_name=vnet-yada-swc01
 spoke_vnet_prefix=10.1.16.0/22
 web_subnet_name=WebSubnet
 web_subnet_prefix=10.1.16.0/26

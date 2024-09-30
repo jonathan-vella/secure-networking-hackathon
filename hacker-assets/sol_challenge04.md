@@ -17,8 +17,8 @@ spoke_vnet_name=vnet-spoke-eus001
 waf_subnet_name=WafSubnet
 
 # Set Variables for Application Gateway
-name=waf-yada-eus01
-pip=pip-waf-yada-eus01
+name=waf-yada-swc01
+pip=pip-waf-yada-swc01
 
 ########--------------------------########
 

@@ -8,13 +8,13 @@ The objective of this challenge is to ensure you understand how to integrate mul
 
 ## Challenge
 
-CMC is ready to deploy YADA in Sweden – where their second largest customer base is. You are tasked with scaling the network to reach the new region and ensure user traffic can route to the application incorporating geo-location and performance.
+CMC is ready to deploy YADA in Germany, where their second largest customer base is. You are tasked with scaling the network to reach the new region and ensure user traffic can route to the application incorporating geo-location and performance.
 
 ## Requirements
 
 CMC has the following requirements:
 
-- Network presence in a new Azure region: Sweden Central
+- Network presence in a new Azure region: Germany West Central.
 - The revised requirements for both instances now includes a WAF at a global level and mandatory SSL offloading. These are on top of the requirements described in the previous challenge.
 - On-premises connectivity to the database server.
 - Optimize the traffic routing based on geo-location and performance
@@ -22,7 +22,7 @@ CMC has the following requirements:
 - All users should be using a single URL regardless of what region they are accessing the application from. Note: Your coach will share with you the public DNS name and SSL certificate.
 - Incoming traffic (i.e., global to regional) should only be allowed to originate from CMC's own global resources deployed in Azure.
 
-Since this is still a proof-of-concept, and time is a constraint, you can create a new VNET in Sweden Central and use VNET Peering to the VNET representing the on-premises network.
+Since this is still a proof-of-concept, and time is a constraint, you can create a new VNET in Germany West Central and use VNET Peering to the VNET representing the on-premises network.
 
 ## Success Criteria
 
@@ -40,7 +40,7 @@ To that end, feedback is considered by the hackathon team as your "cost of parti
 
 We appreciate your efforts and your partnership in the growth and improvement of hackathon. Good luck on the rest of your learning journey!
 
-[Please submit your feedback here](https://forms.office.com/pages/responsepage.aspx?id=v4j5cvGGr0GRqy180BHbRxtjKWqqyqBEupdKhig1hI5UOFQ1MFYyTVdKRFFJQlRNUTQ5NUhPVzRGVC4u)
+[Please submit your feedback here](https://forms.office.com/)
 
 ## References
 

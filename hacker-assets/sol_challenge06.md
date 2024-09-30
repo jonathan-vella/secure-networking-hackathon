@@ -13,9 +13,9 @@ If you don't have a database, you can deploy one using SQL Server:
 suffix=$(head /dev/urandom | tr -dc a-z0-9 | head -c 5 ; echo '')
 
 # Define Variables
-rg=rg-yada-appsvc-eus02
-location="eastus2"
-sql_location="eastus2"
+rg=rg-yada-appsvc-swc01
+location="swedencentral"
+sql_location="swedencentral"
 sql_server_name=sqlsrv$suffix
 sql_db_name=mydb
 sql_username=azure
@@ -40,7 +40,7 @@ This example Azure CLI code deploys the API image on Azure Application Services 
 
 ```bash
 # Run API on Web App
-svcplan_name=yada-appsvcplan-eus01
+svcplan_name=yada-appsvcplan-swc01
 svcplan_sku=P0v3
 app_name_api=yada-api-$suffix
 echo "Creating webapp for API..."

@@ -43,7 +43,7 @@ Using Azure CLI
     # Set variables for Azure environment. You can change the values of these variables to suit your environment.
 
     # Define the Azure location where you want to deploy the resources
-    location=eastus2
+    location=swedencentral
 
     # Define the name of the resource groups
     rg=cmc-on-prem

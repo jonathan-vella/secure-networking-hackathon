@@ -27,7 +27,7 @@ For testing the on-premises server (not the SQL Server!) can be accessed with th
 
 - CMC requires an Azure networking IP address plan presented to them. Where applicable, IP addresses should be contiguous.
 - The solution must be scalable, secure, and resilient and be aligned to the zero trust principles.
-- The primary Azure region CMC will use is East US2.
+- The primary Azure region CMC will use is Sweden Central.
 - You need to design connectivity for YADA, including from on-premises and from any resources in Azure.
 - You need to plan and document network design and connectivity solution.
 - The design must include central access to shared services.
