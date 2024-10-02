@@ -16,7 +16,7 @@ CMC wants to prevent DDoS and keep the app up and running. They want to prevent 
 
 CMC has the following requirements:
 
-- A Web Application Firewall needs to be included in the design to protect the web application from web-based security vulnerabilities.
+- A regional Web Application Firewall needs to be included in the design to protect the web application from web-based security vulnerabilities.
 - The original IP address of the application client needs to be visible to the application servers.
 - Both the web and API tiers must be accessible via a single URL, and cannot be be directly exposed to the internet.
 - The solution should be a reliable service with built-in availability and redundancy. The uptime requirement is 99.99%.
