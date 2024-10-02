@@ -72,6 +72,11 @@ pw='demo!pass123'
 
 ########--------------------------########
 
+# Deploy Internal Load Balancer for API tier
+# Works in progress
+
+########--------------------------########
+
 # Deploy Virtual Machines for YADA
 
 ########--------------------------########

@@ -39,6 +39,15 @@ The app architecture:
 - DNS concepts should be understood and explained in the solution.
 - Azure Policy concepts should be understood and explained in the solution.
 
+
+## Application Gateway Stop Start PowerShell Script
+
+```powershell
+$AppGw = Get-AzApplicationGateway -Name waf-yada-swc01 -ResourceGroupName rg-spoke-swc01
+Stop-AzApplicationGateway -ApplicationGateway $AppGw
+Start-AzApplicationGateway -ApplicationGateway $AppGw
+```
+
 ## References
 
 - [Private Link and DNS integration at scale](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale)
