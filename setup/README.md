@@ -6,11 +6,13 @@ Bring your own subscription (BYOS) enables you to participate in a Microsoft hac
 
 <!-- TOC -->
 
-- [Microsoft hackathon Bring your Own Subscription BYOS](#microsoft-hackathon-bring-your-own-subscription-byos)
+- [Microsoft hackathon Bring your Own Subscription (BYOS)](#microsoft-hackathon-bring-your-own-subscription-byos)
   - [Timing Alert](#timing-alert)
   - [Azure Subscription Guidance](#azure-subscription-guidance)
     - [User and Team Structure](#user-and-team-structure)
     - [Azure Subscription Structure](#azure-subscription-structure)
+    - [Azure AD Permissions](#azure-ad-permissions)
+    - [Azure Consumption Estimate](#azure-consumption-estimate)
 
 <!-- /TOC -->
 
@@ -33,3 +35,17 @@ The approach is to provide ownership access at the subscription level for hackat
 ### Azure AD Permissions
 
 This hackathon does not require additional permissions in Azure AD. It is **not recommended** to run this hackathon in a production Azure AD tenant.
+
+### Azure Consumption Estimate
+
+Estimated Azure Consumption per team is of EUR300 assuming that "on-premises" is deployed 2-3 days prior to the hackathon and that all resources are deleted at the end of the hackathon.
+The below are resources deployed as part of the deployment script (per team). This is a subset of the resources required during the hackathon. Attendees will be deploying additional resources during the hackathon such as Azure Front Door, Azure Firewall, Azure VPN Gateway, Azure Application Gateway, Azure Virtual Machines, Azure SQL, Azure App Services, Azure Bastion, etc.
+
+| Azure resource                | Pricing tier/SKU | Purpose                                          |
+| ----------------------------- | ---------------- | ------------------------------------------------ |
+| Azure Virtual Network         | n/a              | Network space for on premises                    |
+| Azure Network Security Group  | n/a              | SQL subnet, and mgmt subnet NSG                  |
+| Azure Public IP               | Standard         | On-premises VPN gateway public IP                |
+| Azure SQL                     | S0               | Azure SQL Server & Database                      |
+| Azure Virtual Machine         | Standard D2S v3  | Windows VM                                       |
+| Azure Virtual Network Gateway | VPNGW1           | On-premises Gateway                              |
