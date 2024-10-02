@@ -19,7 +19,7 @@ CMC has the following requirements:
 - A regional Web Application Firewall needs to be included in the design to protect the web application from web-based security vulnerabilities.
 - The original IP address of the application client needs to be visible to the application servers.
 - Both the web and API tiers must be accessible via a single URL, and cannot be be directly exposed to the internet.
-- The solution should be a reliable service with built-in availability and redundancy. The uptime requirement is 99.99%.
+- The solution should be a reliable service with built-in availability and redundancy. The uptime requirement is 99.99%. If this cannot be achieved, document the reasons why.
 - Ensure that malicious users can’t bypass the WAF, irrespective of their location.
 - Prevent DDoS attacks while keeping the cost low.
 - There is no requirement to hit the web front end from any CMC's private networks.
