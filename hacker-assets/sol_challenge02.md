@@ -50,9 +50,10 @@ az network vnet subnet update -n $api_subnet_name --vnet-name $spoke_vnet_name -
 
 # Variables for SQL Server
 # You can use either IP address or FQDN
-sql_server_fqdn=10.0.2.4
+# You will need to modify the hosts file on the API VMs to resolve the FQDN
+sql_server_fqdn=yourAzureSqlServerFqdn
 sql_db_name=mydb
-sql_username=sqladmin@yourAzureSqlServerFqdn
+sql_username=sqladmin
 sql_password='demo!pass123'
 
 # Variables for IaaS-based workload
@@ -68,6 +69,11 @@ web_image='erjosito/yadaweb:1.0'
 # Credentials for IaaS-based workload
 adminuser='demouser'
 pw='demo!pass123'
+
+########--------------------------########
+
+# Deploy Internal Load Balancer for API tier
+# Works in progress
 
 ########--------------------------########
 
