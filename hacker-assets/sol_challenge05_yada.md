@@ -99,7 +99,7 @@ EOF
 # Create API Virtual Machines
 echo "Create API Virtual Machines..."
 for i in `seq 1 2`; do
-az vm create -n vm-yada-api-swc0$i -g $rg -l $location --image "${publisher}:${offer}:${sku}:${version}" --generate-ssh-keys --size $vm_size \
+az vm create -n vm-yada-api-gwc0$i -g $rg -l $location --image "${publisher}:${offer}:${sku}:${version}" --generate-ssh-keys --size $vm_size \
 --admin-username $adminuser --admin-password $pw \
 --vnet-name $spoke_vnet_name --subnet $api_subnet_name --nsg "" --public-ip-address "" \
 --zone=$i \
@@ -125,7 +125,7 @@ EOF
 # Create Web Virtual Machines
 echo "Create Web Virtual Machines..."
 for i in `seq 1 2`; do
-az vm create -n vm-yada-web-swc0$i -g $rg -l $location --image "${publisher}:${offer}:${sku}:${version}" --generate-ssh-keys --size $vm_size \
+az vm create -n vm-yada-web-gwc0$i -g $rg -l $location --image "${publisher}:${offer}:${sku}:${version}" --generate-ssh-keys --size $vm_size \
 --admin-username $adminuser --admin-password $pw \
 --vnet-name $spoke_vnet_name --subnet $web_subnet_name --nsg "" --public-ip-address "" \
 --zone=$i \
