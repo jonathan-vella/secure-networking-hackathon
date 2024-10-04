@@ -11,7 +11,7 @@ To deploy this lab environment, you will need an Azure account that has at least
 For deploying the hackathon environment you will need the following:
 
 - [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli) installed locally, or within [Azure Cloud Shell](https://learn.microsoft.com/azure/cloud-shell/overview)
-- If using a local installation, ensure you have the latest version
+- We highly recommend using Azure Cloud Shell for this deployment.
 
 ## Deployment
 
@@ -25,7 +25,7 @@ This script will deploy a network topology in Azure which simulate an on-premise
 
 Using Azure CLI
 
-1.  Sign in to Azure:
+1.  If you are NOT using Azure Cloud Shell, you need to sign in to Azure:
 
     ```sh
     az login
