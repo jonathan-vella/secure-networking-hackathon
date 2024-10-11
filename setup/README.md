@@ -38,7 +38,7 @@ This hackathon does not require additional permissions in Azure AD. It is **not 
 
 ### Azure Consumption Estimate
 
-Estimated Azure Consumption per team is of EUR300 assuming that "on-premises" is deployed 2-3 days prior to the hackathon and that all resources are deleted at the end of the hackathon.
+Estimated Azure Consumption per team is of $400 assuming that "on-premises" is deployed 2-3 days prior to the hackathon and that all resources are deleted at the end of the hackathon.
 The below are resources deployed as part of the deployment script (per team). This is a subset of the resources required during the hackathon. Attendees will be deploying additional resources during the hackathon such as Azure Front Door, Azure Firewall, Azure VPN Gateway, Azure Application Gateway, Azure Virtual Machines, Azure SQL, Azure App Services, Azure Bastion, etc.
 
 | Azure resource                | Pricing tier/SKU | Purpose                                          |
