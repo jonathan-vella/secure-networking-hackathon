@@ -83,7 +83,7 @@ pw='demo!pass123'
 
 # Accept image terms
 # echo "Accepting image terms for $publisher:$offer:$sku..."
-# az vm image terms accept -p $publisher -f $offer --plan $sku
+az vm image terms accept -p $publisher -f $offer --plan $sku
 
 ########--------------------------########
 
