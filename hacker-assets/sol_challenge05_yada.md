@@ -62,7 +62,7 @@ publisher="Canonical"
 sku="20_04-lts-gen2"
 version=latest
 vm_size=Standard_D2s_v3 # Depending on your scenario you may want to use a different VM size
-ilb_api=10.2.16.68 # Update this with the private IP address of the Internal Load Balancer for the API tier
+ilb_api=10.2.16.70 # Update this with the private IP address of the Internal Load Balancer for the API tier
 api_image='erjosito/yadaapi:1.0'
 web_image='erjosito/yadaweb:1.0'
 
