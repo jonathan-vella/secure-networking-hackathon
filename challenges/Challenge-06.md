@@ -22,7 +22,8 @@ The app architecture:
 
 - The Web tier and the API tier need to be deployed as containerized Azure Web Apps. You can use the guidance located [here](../hacker-assets/sol_challenge06.md) to deploy both tiers in Azure App Service.
 - Both tiers should not be directly exposed to the internet, and all users must be directed through a WAF before accessing the application. You need to also ensure that clients can’t bypass the firewall by using \*.azurewebsites.net
-- You are not allowed to create any additional network services such as Virtual networks and Application Gateways, but you allowed to CRUD Subnets in existing Virtual Networks.
+- The Web tier should be able to communicate with the API tier using a private IP address.
+- The API tier should be able to communicate with the Azure SQL database using a private IP address.
 - At this stage, CMC decided to use an Azure SQL database with SQL authentication in the S0 tier with locally redundant storage. The Database should not be publicly accessible and needs to be only accessible with a private IP using a DNS name.
 - In the future CMC want to enforce the use of encryption, private endpoints and DNS integration for Azure SQL. They want you to provide them with options and guidance how to achieve this.
 - CMC has requested an estimate of the downtime during the transition to App services.
@@ -37,8 +38,6 @@ The app architecture:
 - Simulate a regional outage and verify that traffic is redirected to the next closest region.
 - With the exception of Azure Firewall, Application Gateway, and the VPN Gateway, no other public IP addresses should be used.
 - DNS concepts should be understood and explained in the solution.
-- Azure Policy concepts should be understood and explained in the solution.
-
 
 ## Application Gateway Stop Start PowerShell Script
 

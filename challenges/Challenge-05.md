@@ -2,13 +2,11 @@
 
 ## Background
 
-CMC is ready to go global. In this challenge, you will expand the network architecture to multiple Azure regions and establish global connectivity between VNets in the Azure regions. Your network design must continue to evolve to meet the growing needs as the company expands.
-
-The objective of this challenge is to ensure you understand how to integrate multiple regions into your design as it begins to scale.
+CMC is set to expand globally. Your task is to design a network that supports CMC's worldwide growth. This network must adapt to the company's evolving needs, utilizing multiple Azure regions and establishing global connectivity between VNets. The goal of this challenge is to ensure you can integrate multiple regions into your scalable design.
 
 ## Challenge
 
-CMC is ready to deploy YADA in Germany, where their second largest customer base is. You are tasked with scaling the network to reach the new region and ensure user traffic can route to the application incorporating geo-location and performance.
+CMC is getting ready to deploy a modernized version of YADA in Germany, where their second largest customer base is. You are tasked with scaling the network to reach the new region and ensure that in the very near future user traffic can be routed to the application based on the geo-location of the user to enhance application delivery performance.
 
 ## Requirements
 
@@ -16,21 +14,18 @@ CMC has the following requirements:
 
 - Network presence in a new Azure region: Germany West Central.
 - The revised requirements for both instances now includes a WAF at a global level and mandatory SSL offloading. These are on top of the requirements described in the previous challenge.
-- On-premises connectivity to the database server.
 - Optimize the traffic routing based on geo-location and performance
 - Ensure end-users can still access the application in the case of a regional outage
-- All users should be using a single URL regardless of what region they are accessing the application from. Note: Your coach will share with you the public DNS name and SSL certificate.
+- All users should be using a single URL regardless of what region they are accessing the application from. Note: Your coach will share with you the new public DNS name/s you will be using for this challenge.
 - Incoming traffic (i.e., global to regional) should only be allowed to originate from CMC's own global resources deployed in Azure.
-
-Since this is still a proof-of-concept, and time is a constraint, you can create a new VNET in Germany West Central and use VNET Peering to the VNET representing the on-premises network.
 
 ## Success Criteria
 
 - Present to your coach CMC's global network design with an updated environment diagram.
 - Explain your design decisions based on the requirements above.
-- Present the single URL for the app.
-- Demonstrate how the solution would respond in the case of a regional outage from an end-user perspective and from the Azure administrator teams’ perspective that manage the workload.
-- Validate that the second instance of YADA has access to the on-premises database.
+- Present the single URL for the app by accessing the application (currently deployed in Sweden) from a browser.
+- Explain how your solution design would respond in the case of a regional outage from an end-user perspective and from the Azure administrator teams’ perspective that manage the workload.
+- Explain how the solution would respond to a simulated DDoS attack.
 
 ### Survey and Feedback
 
