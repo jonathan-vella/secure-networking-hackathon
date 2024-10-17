@@ -8,6 +8,8 @@ CMC is set to expand globally. Your task is to design a network that supports CM
 
 CMC is getting ready to deploy a modernized version of YADA in Germany, where their second largest customer base is. You are tasked with scaling the network to reach the new region and ensure that in the very near future user traffic can be routed to the application based on the geo-location of the user to enhance application delivery performance.
 
+> **Note**: This challenge focuses solely on solution design. Implementation of the solution is not required.
+
 ## Requirements
 
 CMC has the following requirements:

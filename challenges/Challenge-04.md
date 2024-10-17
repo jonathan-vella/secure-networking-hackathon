@@ -40,6 +40,8 @@ CMC has the following requirements:
 - [Load-balancing options - Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/load-balancing-overview?toc=%2Fazure%2Fnetworking%2Ffundamentals%2Ftoc.json)
 - [Azure DDoS Protection Tiers](https://learn.microsoft.com/en-us/azure/ddos-protection/ddos-protection-sku-comparison)
 - [What is Azure Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/overview?toc=%2Fazure%2Fnetworking%2Ffundamentals%2Ftoc.json)
+- [Azure Application Gateway Infrastructure Configuration](https://learn.microsoft.com/en-us/azure/application-gateway/configuration-infrastructure)
+- [Azure Application Gateway Health Probes](https://learn.microsoft.com/en-us/azure/application-gateway/application-gateway-probe-overview)
  - [Azure WAF Workbook](https://github.com/Azure/Azure-Network-Security/tree/master/Azure%20WAF/Workbook%20-%20WAF%20Monitor%20Workbook)
  - [Azure WAF Triage Workbook](https://github.com/Azure/Azure-Network-Security/tree/master/Azure%20WAF/Workbook%20-%20AppGw%20WAF%20Triage%20Workbook)
 
