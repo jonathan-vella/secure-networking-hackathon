@@ -120,11 +120,6 @@ Using Azure CLI
     --admin-user $sql_admin_username \
     --admin-password $sql_admin_password
 
-    # Disable Microsoft Entra-only Authentication
-    az sql server ad-only-auth disable  \
-    --resource-group $rg \
-    --name $sql_server_name
-
     # Create a database in the server with the S0 tier
     az sql db create \
     --resource-group $rg \

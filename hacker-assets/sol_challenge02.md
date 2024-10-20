@@ -9,7 +9,7 @@ You can use these commands to deploy the YADA app to an existing resource group 
 # Define the Azure location where you want to deploy the resources
 location=swedencentral
 # Define the name of the resource groups
-rg=rg-yada-swc01
+rg=rg-cmc-yada-swc01
 
 # Note. This script assumes that you have not already created a resource group in Azure.
 # You can use the following command to create one:
