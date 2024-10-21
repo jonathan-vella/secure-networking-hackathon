@@ -46,6 +46,6 @@ The below are resources deployed as part of the deployment script (per team). Th
 | Azure Virtual Network         | n/a              | Network space for on premises                    |
 | Azure Network Security Group  | n/a              | SQL subnet, and mgmt subnet NSG                  |
 | Azure Public IP               | Standard         | On-premises VPN gateway public IP                |
-| Azure SQL                     | S0               | Azure SQL Server & Database                      |
+| Azure Virtual Machine         | Standard D2S v3  | SQL Server VM                                    |
 | Azure Virtual Machine         | Standard D2S v3  | Windows VM                                       |
 | Azure Virtual Network Gateway | VPNGW1           | On-premises Gateway                              |
