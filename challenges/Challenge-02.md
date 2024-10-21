@@ -25,7 +25,7 @@ Work with your team to plan and deploy a solution.
 CMC has the following requirements:
 
 - The application requires a load balancing solution that can direct requests to the available endpoints to ensure application availability.
-- The application needs to be able to communicate to the database resources on premises (the username is `sqladmin`, the password is `demo!pass123`).
+- The application needs to be able to communicate to the database resources on premises (the username is `demouser`, the password is `demo!pass123`).
 - The application should be resilient to an Azure DC failure and be cost-effective leveraging cloud native tools.
 - The solution must enable the middle tier to communicate to external internet endpoints without attaching a public IP to any VM.
 - The solution components should take advantage of cloud resiliency to individually meet an SLA requirement of 99.99% when possible

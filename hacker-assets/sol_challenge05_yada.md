@@ -1,7 +1,7 @@
 # Secure Networking Artifacts
-## Challenge 05 - Deploying YADA in Germany West Central
+## Challenge 05 - Deploying YADA IaaS-version in Germany West Central
 
-You can use these commands to deploy the YADA app to an existing resource group (note that you will need to update some of the variables):
+You can use these commands to deploy the YADA app to an existing resource group(note that you will need to update some of the variables):
 
 ```bash
 # Set variables for Azure environment

@@ -49,11 +49,9 @@ az network vnet subnet update -n $api_subnet_name --vnet-name $spoke_vnet_name -
 ########--------------------------########
 
 # Variables for SQL Server
-# You can use either IP address or FQDN
-# You will need to modify the hosts file on the API VMs to resolve the FQDN
-sql_server_fqdn=yourAzureSqlServerName.database.windows.net
+sql_server_fqdn=10.0.3.4
 sql_db_name=mydb
-sql_username=sqladmin
+sql_username=demouser
 sql_password='demo!pass123'
 
 # Variables for IaaS-based workload

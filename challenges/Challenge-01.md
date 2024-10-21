@@ -14,7 +14,7 @@ Currently CMC uses 10.0.0.0/16 for their on-premises network. The network admin 
 
 The following on-premises resources can be used to connect to Azure:
 
-- VPN Gateway "vpn-on-prem" with Public IP “pip-onprem-vpn-gateway” attached.
+- VPN Gateway "vpn-gateway-cmc-onprem" with Public IP “pip-onprem-vpn-gateway” attached.
 
 ![CMC on-premises network diagram](images/on-premises.png)
 
