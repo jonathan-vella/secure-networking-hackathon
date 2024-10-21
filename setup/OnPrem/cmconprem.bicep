@@ -1,7 +1,7 @@
-@description('The admin user name for both the Windows and Linux virtual machines.')
+@description('The admin user name for both Azure Virtual Machines.')
 param adminUserName string = 'demouser'
 
-@description('The admin password for both the Windows and Linux virtual machines.')
+@description('The admin password for both Azure Virtual Machines.')
 @secure()
 param adminPassword string = 'demo!pass123'
 param mocOnpremNetwork object = {
