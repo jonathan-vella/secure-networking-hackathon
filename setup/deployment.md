@@ -10,55 +10,55 @@ To deploy this lab environment, you will need an Azure account that has at least
 
 For deploying the hackathon environment you will need the following:
 
-- [Bicep Tools](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/install) installed locally.
-- [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli) installed locally, or within [Azure Cloud Shell](https://learn.microsoft.com/azure/cloud-shell/overview).
-- We highly recommend using Azure Cloud Shell for this deployment.
+- [Azure PowerShell](https://learn.microsoft.com/powershell/azure/install-az-ps?view=azps-8.3.0) installed locally, or within[Azure Cloud Shell](https://learn.microsoft.com/azure/cloud-shell/overview)
+- [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli) installed locally, or within [Azure Cloud Shell](https://learn.microsoft.com/azure/cloud-shell/overview)
+- If using a local installation, ensure you have the latest version
+- We highly recommend using Azure Cloud Shell for this deployment to avoid any potential issues with local tooling.
 
 ## Deployment
 
-> Note: This script will often take 30-45 minutes on average to execute. It assumes that you have already installed Bicep Tools and the Azure CLI, and that you are logged in to your Azure account. If you are using Azure Cloud Shell, you can skip the login step.
+> Note: This script will often take 30-45 minutes on average to execute. It assumes that you have already all tooling installed and that you are logged in to your Azure account. If you are using Azure Cloud Shell, you can skip the login step.
 
-The Bicep file, which is located [here](/setup/OnPrem/cmconprem.bicep) will deploy a network topology in Azure which simulate an on-premises DC. It will create the following resources:
+The ARM template, located [here](./OnPrem/cmc-arm.json) will deploy a network topology in Azure which simulate an on-premises DC. It will create the following resources:
 - 1. On-Premises Network
 - 2. Management VM
-- 3. Azure SQL Server with a Private Endpoint
+- 3. SQL Server VM
 - 4. On-Premises VPN Gateway
 
-Using Azure CLI
+If using PowerShell: 
 
-1.  If you are NOT using Azure Cloud Shell, you need to sign in to Azure:
+1. Sign in to Azure:
 
-    ```sh
-    az login
+    ```Powershell
+    Connect-AzAccount
     ```
+2. Deploy the script     
 
-2.  Set Azure subscription:
+    ```Powershell    
+    $RGname = 'rg-cmc-onprem'
+    $location = 'swedencentral'
 
-    ```sh
-    az account set --subscription "your-subscription-name"
+    New-AzResourceGroup -Name $RGname -Location $location
+
+    New-AzResourceGroupDeployment -ResourceGroupName $RGname -TemplateFile cmc-arm.json
     ```
+If using CLI
 
-3. Execute the script
+1. Sign in to Azure:
 
-    ```sh
-    # Define variables
-    rgname="rg-cmc-onprem"
-    location="swedencentral"
-    
-    # Create Resource Group
-    az group create --name $rgname --location $location
+```sh
+az login
+```
 
-    # Create a random suffix
-    suffix=$(head /dev/urandom | tr -dc a-z0-9 | head -c 5 ; echo '')
+2. Deploy the script 
 
-    # Deploy local Bicep file
-    az deployment group create --name cmconprem$suffix \
-    --resource-group $rgname \
-    --template-file <path-to-cmconprem.bicep>
+```sh
+ $RGname = 'rg-cmc-onprem'
+ $location = 'swedencentral'
 
-    # Deploy remote Bicep file
-    # Currently this is not supported in Azure CLI.
-    ```
+az group create --name $RGname --location $location
+az deployment group create --resource-group $RGname --template-file cmc-arm.json            
+```
 
 ### Provisioned Resources
 
