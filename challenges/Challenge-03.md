@@ -31,7 +31,7 @@ CMC has the following requirements:
 
 - Present an updated environment diagram. Your diagram must depict clearly the flow of traffic including routing.
 - Present Firewall logs and demonstrate that traffic traverses the firewall.
-- Present NSG flow logs and show if there are any malicious IPs trying to access the application.
+- Present VNET flow logs and show if there are any malicious IPs trying to access the application.
 - Present insights that visualize the traffic activity of the application.
 - Ensure the spoke VMs can reach each other's networks with the added security measures in place.
 - Ensure the VMs are not accessible on any non-required TCP or UDP port.
